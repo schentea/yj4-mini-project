@@ -1,6 +1,7 @@
 import Video from "./video/Headervideo.mp4";
 import logo from "./image/logo.png";
 import FooterLogo from "./image/footerlogo.jpg";
+import Chat from "./image/chat.jpg";
 function App() {
   return (
     <>
@@ -109,62 +110,71 @@ function App() {
       </section>
       {/* 준비하고 떠나는 여행TIP */}
       <section className="w-full h-screen flex justify-center">
-        <div className="w-full max-w-[1300px] h-full bg-slate-500 ">
+        <div className="w-full h-full bg-slate-500 ">
           {/* TITLE */}
           <div className="w-full flex justify-center mt-16">
             <h2>
-              준비하고 떠나는 <span className="text-[#ef6d00]">여행TIP</span>
+              준비하고 떠나는{" "}
+              <span className="text-[#ef6d00] font-bold">여행TIP</span>
             </h2>
           </div>
         </div>
       </section>
       {/* 제주도 인스타그램 */}
-      <section className="w-full h-screen flex justify-center">
-        <div className="w-full max-w-[1300px] h-full bg-slate-600 ">
+      <section className="w-full h-auto flex justify-center relative mb-32">
+        <img
+          id="hidden_img"
+          src={Chat}
+          alt=""
+          className=" absolute -bottom-8 right-[8vw] w-40 hidden"
+        />
+
+        <div className="w-full max-w-[1300px] h-full p-4 overflow-hidden">
           {/* TITLE */}
           <div className="w-full flex items-center mt-16 flex-col">
-            <h2>
-              제주도 <span className="text-[#ef6d00]">인스타그램</span>
+            <h2 className="mb-16">
+              제주도{" "}
+              <span className="text-[#ef6d00] font-bold">인스타그램</span>
             </h2>
             {/* Grid Instagram */}
             <div className="w-full h-full flex justify-center">
               <div
                 id="Main_Grid"
-                className="w-[80%] h-full text-white grid grid-cols-4 grid-rows-2 gap-4"
+                className="w-full h-full text-white grid grid-cols-4 grid-rows-2 gap-4"
               >
                 <div className="flex justify-center items-center">
                   <img
                     src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
                     alt="empty"
-                    className="w-full h-[520px] object-cover"
+                    className="w-full h-[680px] object-cover object-center"
                   />
                 </div>
                 <div className="flex justify-center items-center">
                   <img
                     src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
                     alt="empty"
-                    className="w-full h-[250px] object-cover"
+                    className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
                 <div className="flex justify-center items-center">
                   <img
                     src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
                     alt="empty"
-                    className="w-full h-[250px] object-cover"
+                    className="w-full h-[330px] object-cover object-center "
                   />
                 </div>
                 <div className=" flex justify-center items-center ">
                   <img
                     src="https://pixabay.com/get/g946daf2725040be8c0745a2a6f59e81263a5fbbdaab676ec0c7dc94d1587b0cade13be95167202e9f9602fed655dfea0.jpg"
                     alt="empty"
-                    className="w-full h-[250px]"
+                    className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
-                <div className=" flex justify-center items-center ">
+                <div className=" flex justify-center items-center  ">
                   <img
                     src="https://pixabay.com/get/g946daf2725040be8c0745a2a6f59e81263a5fbbdaab676ec0c7dc94d1587b0cade13be95167202e9f9602fed655dfea0.jpg"
                     alt="empty"
-                    className="w-full h-[250px]"
+                    className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
               </div>

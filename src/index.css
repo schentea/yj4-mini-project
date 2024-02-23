@@ -45,7 +45,11 @@
 #Main_Grid div:nth-child(5) {
   grid-area: f;
 }
-
+@media screen and (min-width:1918px) {
+  #hidden_img{
+    display: block
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
