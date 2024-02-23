@@ -2,6 +2,9 @@ import Video from "./video/Headervideo.mp4";
 import logo from "./image/logo.png";
 import FooterLogo from "./image/footerlogo.jpg";
 import Chat from "./image/chat.jpg";
+import React from "react";
+import { Carousel } from "react-bootstrap";
+
 function App() {
   return (
     <>
@@ -110,16 +113,17 @@ function App() {
       </section>
       {/* 준비하고 떠나는 여행TIP */}
       <section className="w-full h-screen flex justify-center">
-        <div className="w-full h-full bg-slate-500 p-12 max-w-[1300px]">
+        <div className="w-full h-full  p-12 max-w-[1300px]">
           {/* TITLE */}
-          <div className="w-full flex justify-center mt-16 mb-16">
+          <div className="w-full flex flex-col items-center mt-16 mb-16">
             <h2>
               준비하고 떠나는{" "}
               <span className="text-[#ef6d00] font-bold">여행TIP</span>
             </h2>
+            <p className="mt-2">알고가면 더 재미있는 제주도 여행 정보</p>
           </div>
           {/* 이미지 통괄  */}
-          <div className="flex justify-between">
+          <div className="flex justify-between mb-36">
             {/* 왼쪽 이미지 */}
             <div className="w-[30%]">
               <div className="w-full bg-gray-700 flex flex-col items-center">
@@ -134,7 +138,34 @@ function App() {
               </div>
             </div>
             {/* 중간 캐러셀 */}
-
+            <div className="w-[30%] mt-20">
+              <Carousel id="Carousel">
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-alpha-sig.figma.com/img/1d0b/33e2/0ac7d18c60878918108e1d8ae5ab7c46?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inhBdxTSY37wZqayEkx2Euq-BiVQaNogCdngpZvMQJgmPGMDLMsNl8ShPK~vZKaKbhVKltCV7wdx1t1b9mK8Z4LcJCVFssXn~j8h5EUFErgWPMtseAUQsAg0PEx1dvog2ypH5il9STMbKZ9lht-alxNg8U6Lkl907e3VDwjdy3TbP1S2HsIjEq2nEqZ1n1LP8tDw~8I3OrENwQF8LpHbukPIE3tfJwB0OU7rBH0zocCUNhpEcMRYQGrBOGr6H38518yQxkhxUwtqWpxKwtxqMFDQs3PylDBVlAgmRv-ytFTxDSbV8DXTrn6mIi-K0EYPYZucIjst29R12aoQhKgJVA__"
+                    alt="First slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-alpha-sig.figma.com/img/1d0b/33e2/0ac7d18c60878918108e1d8ae5ab7c46?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inhBdxTSY37wZqayEkx2Euq-BiVQaNogCdngpZvMQJgmPGMDLMsNl8ShPK~vZKaKbhVKltCV7wdx1t1b9mK8Z4LcJCVFssXn~j8h5EUFErgWPMtseAUQsAg0PEx1dvog2ypH5il9STMbKZ9lht-alxNg8U6Lkl907e3VDwjdy3TbP1S2HsIjEq2nEqZ1n1LP8tDw~8I3OrENwQF8LpHbukPIE3tfJwB0OU7rBH0zocCUNhpEcMRYQGrBOGr6H38518yQxkhxUwtqWpxKwtxqMFDQs3PylDBVlAgmRv-ytFTxDSbV8DXTrn6mIi-K0EYPYZucIjst29R12aoQhKgJVA__"
+                    alt="Second slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="https://s3-alpha-sig.figma.com/img/1d0b/33e2/0ac7d18c60878918108e1d8ae5ab7c46?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inhBdxTSY37wZqayEkx2Euq-BiVQaNogCdngpZvMQJgmPGMDLMsNl8ShPK~vZKaKbhVKltCV7wdx1t1b9mK8Z4LcJCVFssXn~j8h5EUFErgWPMtseAUQsAg0PEx1dvog2ypH5il9STMbKZ9lht-alxNg8U6Lkl907e3VDwjdy3TbP1S2HsIjEq2nEqZ1n1LP8tDw~8I3OrENwQF8LpHbukPIE3tfJwB0OU7rBH0zocCUNhpEcMRYQGrBOGr6H38518yQxkhxUwtqWpxKwtxqMFDQs3PylDBVlAgmRv-ytFTxDSbV8DXTrn6mIi-K0EYPYZucIjst29R12aoQhKgJVA__"
+                    alt="Third slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
+            </div>
             {/* 오른쪽 이미지 */}
             <div className="w-[30%]">
               <div className="w-full bg-gray-700 flex flex-col items-center">
@@ -149,8 +180,14 @@ function App() {
               </div>
             </div>
           </div>
-
           {/* 아래쪽 컨텐츠 */}
+          <div className="w-full h-[120px] border border-gray-800 rounded-lg flex justify-around items-center px-16">
+            <div className="text-[24px]">면세 쇼핑몰</div>
+            <div className="w-[1px] h-16 bg-gray-500"></div>
+            <div className="text-[24px]"> 여행플랫폼</div>
+            <div className="w-[1px] h-16 bg-gray-500"></div>
+            <div className="text-[24px]">E jeju</div>
+          </div>
         </div>
       </section>
       {/* 제주도 인스타그램 */}

@@ -1,11 +1,13 @@
 /* 폰트 가져오기 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @font-face {
     font-family: 'establishRoomNo703OTF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 /* Tailwind CSS 설정 */
 @layer base {
   body{
@@ -44,6 +46,9 @@
 }
 #Main_Grid div:nth-child(5) {
   grid-area: f;
+}
+#Carousel Button{
+  display: none;
 }
 @media screen and (min-width:1918px) {
   #hidden_img{
