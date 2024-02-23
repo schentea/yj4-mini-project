@@ -21,6 +21,31 @@
   }
 }
 
+#Main_Grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'a a c b'
+    'a a e f';
+}
+
+#Main_Grid div:nth-child(1) {
+  grid-area: a;
+}
+#Main_Grid div:nth-child(2) {
+  grid-area: b;
+}
+#Main_Grid div:nth-child(3) {
+  grid-area: c;
+}
+#Main_Grid div:nth-child(4) {
+  grid-area: e;
+}
+#Main_Grid div:nth-child(5) {
+  grid-area: f;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

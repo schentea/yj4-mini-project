@@ -1,5 +1,6 @@
 import Video from "./video/Headervideo.mp4";
 import logo from "./image/logo.png";
+import FooterLogo from "./image/footerlogo.jpg";
 function App() {
   return (
     <>
@@ -106,6 +107,93 @@ function App() {
           </div>
         </div>
       </section>
+      {/* 준비하고 떠나는 여행TIP */}
+      <section className="w-full h-screen flex justify-center">
+        <div className="w-full max-w-[1300px] h-full bg-slate-500 ">
+          {/* TITLE */}
+          <div className="w-full flex justify-center mt-16">
+            <h2>
+              준비하고 떠나는 <span className="text-[#ef6d00]">여행TIP</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+      {/* 제주도 인스타그램 */}
+      <section className="w-full h-screen flex justify-center">
+        <div className="w-full max-w-[1300px] h-full bg-slate-600 ">
+          {/* TITLE */}
+          <div className="w-full flex items-center mt-16 flex-col">
+            <h2>
+              제주도 <span className="text-[#ef6d00]">인스타그램</span>
+            </h2>
+            {/* Grid Instagram */}
+            <div className="w-full h-full flex justify-center">
+              <div
+                id="Main_Grid"
+                className="w-[80%] h-full text-white grid grid-cols-4 grid-rows-2 gap-4"
+              >
+                <div className="flex justify-center items-center">
+                  <img
+                    src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
+                    alt="empty"
+                    className="w-full h-[520px] object-cover"
+                  />
+                </div>
+                <div className="flex justify-center items-center">
+                  <img
+                    src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
+                    alt="empty"
+                    className="w-full h-[250px] object-cover"
+                  />
+                </div>
+                <div className="flex justify-center items-center">
+                  <img
+                    src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
+                    alt="empty"
+                    className="w-full h-[250px] object-cover"
+                  />
+                </div>
+                <div className=" flex justify-center items-center ">
+                  <img
+                    src="https://pixabay.com/get/g946daf2725040be8c0745a2a6f59e81263a5fbbdaab676ec0c7dc94d1587b0cade13be95167202e9f9602fed655dfea0.jpg"
+                    alt="empty"
+                    className="w-full h-[250px]"
+                  />
+                </div>
+                <div className=" flex justify-center items-center ">
+                  <img
+                    src="https://pixabay.com/get/g946daf2725040be8c0745a2a6f59e81263a5fbbdaab676ec0c7dc94d1587b0cade13be95167202e9f9602fed655dfea0.jpg"
+                    alt="empty"
+                    className="w-full h-[250px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 푸터 */}
+      <footer className="w-full h-[120px] bg-[#FFF2E5] flex justify-between">
+        {/* 푸터 왼쪽 */}
+        <div className="w-1/2 ml-16 h-full flex flex-col justify-center">
+          <div>
+            <h2>API</h2>
+          </div>
+          <div className="flex space-x-6 font-bold">
+            <p>Instagram API</p>
+            <p>Visitjeju Tour API</p>
+            <p>Weather API</p>
+          </div>
+        </div>
+        {/* 푸터 오른쪽 */}
+        <div className="w-1/2 flex justify-end items-center mr-16">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/6bf0/5ce2/f84a210f5c24628860b69e4ccb51a023?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n5-RKxPRXRAdPlg~6Q-s1SVplxTGi5zgqIGA8vT7N~eH57VPu2fOlMnl71V7pd~lWeuVWmzDpTQAs5852ywsUxyP8sLtMG5lW2E8wJzLYJFGQ91VAhYp~weO-3tjKmtCLv8Uc-y~uevAIyDloELzLqSrzrpU8lJmbtnyOgDQszfjbKRHi1EC4CWNNRSB6RL51A1g~-TkW64v9o5NGX0XzDrH~1kGaM0deH~3iTIrF4nirQcWZMPxsyz9azuB2rMueuy88WGndIFyvMiq6ZXu8XDPjApy~Nbd3EhyatTZbLKOFeh40xEhKfFnpfort9w6k2A745JsXOtSM7YD-9FMrg__"
+            alt=""
+          />
+          <img className="h-[60%]" src={FooterLogo} alt="" />
+        </div>
+      </footer>
     </>
   );
 }
