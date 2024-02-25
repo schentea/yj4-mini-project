@@ -4,7 +4,11 @@ import FooterLogo from "./image/footerlogo.jpg";
 import Chat from "./image/chat.jpg";
 import React from "react";
 import { Carousel } from "react-bootstrap";
-
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { FaInstagram } from "react-icons/fa6";
+import minilogo1 from "./image/minilogo1.jpg";
+import minilogo2 from "./image/minilogo2.jpg";
+import minilogo3 from "./image/minilogo3.jpg";
 function App() {
   return (
     <>
@@ -44,7 +48,7 @@ function App() {
         </div>
       </header>
       {/* 지금 제주도! 여기어떄요? */}
-      <section className="w-full h-[200vh] flex bg-[url('https://pixabay.com/get/g2a43aa6a2ed33fc2688727029b78eab8fa02b729b13c973ae0c5e6255f1bf57e78f69dfedb93066da43dea923356ebda.jpg')] bg-cover bg-center">
+      <section className="w-full h-[200vh] flex bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
         {/* 왼쪽 공간 */}
         <div className="w-1/3 h-2/3 flex flex-col justify-center ml-20">
           {/* 주황색 제목 */}
@@ -70,19 +74,19 @@ function App() {
           {/*오른쪽중에 _ 왼쪽*/}
           <div className="w-1/2 h-full  flex flex-col items-center pt-10">
             {/* 1 */}
-            <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/g2ba10f6aa0f6e081eb27e5fe2a04ed92ea56c4756166b7488310161e2bbace9dd5e5a216ef08edf194888b94ab6c3b6e.jpg')] bg-cover bg-center">
+            <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
               amet eos sunt vitae ipsa ad? Molestias, iure assumenda! Porro,
             </div>
             <h2>사진 제목</h2>
             {/* 2 */}
-            <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/g2ba10f6aa0f6e081eb27e5fe2a04ed92ea56c4756166b7488310161e2bbace9dd5e5a216ef08edf194888b94ab6c3b6e.jpg')] bg-cover bg-center">
+            <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
               amet eos sunt vitae ipsa ad? Molestias, iure assumenda! Porro,
             </div>
             <h2>사진 제목</h2>
             {/* 3 */}
-            <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/g2ba10f6aa0f6e081eb27e5fe2a04ed92ea56c4756166b7488310161e2bbace9dd5e5a216ef08edf194888b94ab6c3b6e.jpg')] bg-cover bg-center">
+            <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
               amet eos sunt vitae ipsa ad? Molestias, iure assumenda! Porro,
             </div>
@@ -91,19 +95,19 @@ function App() {
           {/*오른쪽중에 _ 오른쪽*/}
           <div className="w-1/2 h-full  flex flex-col items-center pt-[100px]">
             {/* 1 */}
-            <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/g2ba10f6aa0f6e081eb27e5fe2a04ed92ea56c4756166b7488310161e2bbace9dd5e5a216ef08edf194888b94ab6c3b6e.jpg')] bg-cover bg-center">
+            <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
               amet eos sunt vitae ipsa ad? Molestias, iure assumenda! Porro,
             </div>
             <h2>사진 제목</h2>
             {/* 2 */}
-            <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/g2ba10f6aa0f6e081eb27e5fe2a04ed92ea56c4756166b7488310161e2bbace9dd5e5a216ef08edf194888b94ab6c3b6e.jpg')] bg-cover bg-center">
+            <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
               amet eos sunt vitae ipsa ad? Molestias, iure assumenda! Porro,
             </div>
             <h2>사진 제목</h2>
             {/* 3 */}
-            <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/g2ba10f6aa0f6e081eb27e5fe2a04ed92ea56c4756166b7488310161e2bbace9dd5e5a216ef08edf194888b94ab6c3b6e.jpg')] bg-cover bg-center">
+            <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 bg-[url('https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg')] bg-cover bg-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
               amet eos sunt vitae ipsa ad? Molestias, iure assumenda! Porro,
             </div>
@@ -116,9 +120,10 @@ function App() {
         <div className="w-full h-full  p-12 max-w-[1300px]">
           {/* TITLE */}
           <div className="w-full flex flex-col items-center mt-16 mb-16">
-            <h2>
+            <h2 className="flex items-center">
               준비하고 떠나는{" "}
-              <span className="text-[#ef6d00] font-bold">여행TIP</span>
+              <span className="text-[#ef6d00] font-bold">여행TIP</span>{" "}
+              <HiOutlineLightBulb className=" inline-block" />
             </h2>
             <p className="mt-2">알고가면 더 재미있는 제주도 여행 정보</p>
           </div>
@@ -182,11 +187,20 @@ function App() {
           </div>
           {/* 아래쪽 컨텐츠 */}
           <div className="w-full h-[120px] border border-gray-800 rounded-lg flex justify-around items-center px-16">
-            <div className="text-[24px]">면세 쇼핑몰</div>
+            <div className="text-[24px] flex items-center">
+              <img src={minilogo1} alt="" className="w-8 mr-2" />
+              <span>면세 쇼핑몰</span>
+            </div>
             <div className="w-[1px] h-16 bg-gray-500"></div>
-            <div className="text-[24px]"> 여행플랫폼</div>
+            <div className="text-[24px] flex items-center">
+              <img src={minilogo2} alt="" className="w-8 mr-2" />{" "}
+              <span>여행플랫폼</span>
+            </div>
             <div className="w-[1px] h-16 bg-gray-500"></div>
-            <div className="text-[24px]">E jeju</div>
+            <div className="text-[24px] flex items-center">
+              <img src={minilogo3} alt="" className="w-8 mr-2" />
+              <span>E jeju</span>
+            </div>
           </div>
         </div>
       </section>
@@ -202,9 +216,10 @@ function App() {
         <div className="w-full max-w-[1300px] h-full p-4 overflow-hidden">
           {/* TITLE */}
           <div className="w-full flex items-center mt-16 flex-col">
-            <h2 className="mb-16">
+            <h2 className="mb-16 flex items-center">
               제주도{" "}
               <span className="text-[#ef6d00] font-bold">인스타그램</span>
+              <FaInstagram className=" inline-block" />
             </h2>
             {/* Grid Instagram */}
             <div className="w-full h-full flex justify-center">
@@ -214,35 +229,35 @@ function App() {
               >
                 <div className="flex justify-center items-center">
                   <img
-                    src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
+                    src="https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg"
                     alt="empty"
                     className="w-full h-[680px] object-cover object-center"
                   />
                 </div>
                 <div className="flex justify-center items-center">
                   <img
-                    src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
+                    src="https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg"
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
                 <div className="flex justify-center items-center">
                   <img
-                    src="https://pixabay.com/get/gb44d445a2cd2f2c9dd7c58933ec0d27bcee87f8a573ab792d51e9932ec27a5d0eaf56b1d4bea55f8b54640b76bc00849.jpg"
+                    src="https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg"
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center "
                   />
                 </div>
                 <div className=" flex justify-center items-center ">
                   <img
-                    src="https://pixabay.com/get/g946daf2725040be8c0745a2a6f59e81263a5fbbdaab676ec0c7dc94d1587b0cade13be95167202e9f9602fed655dfea0.jpg"
+                    src="https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg"
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
                 <div className=" flex justify-center items-center  ">
                   <img
-                    src="https://pixabay.com/get/g946daf2725040be8c0745a2a6f59e81263a5fbbdaab676ec0c7dc94d1587b0cade13be95167202e9f9602fed655dfea0.jpg"
+                    src="https://pixabay.com/get/ge01c1ef1d9e498fc8962c65f0299eda6701cd007c78ccd7b9809fe4f51b2cb1fbfa0ec1fe76f8fc93fc93a66d2bdd7d0.jpg"
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center"
                   />
