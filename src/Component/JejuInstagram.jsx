@@ -4,7 +4,7 @@ import Chat from '../image/chat.jpg';
 export default function JejuInstagram() {
     return (
         <>
-            <section className="w-full h-auto flex justify-center relative mb-32">
+            <section className="w-full h-auto flex justify-center relative mb-32 mt-48 lg:mt-96 xl:mt-0">
                 <img id="hidden_img" src={Chat} alt="" className=" absolute -bottom-8 right-[8vw] w-40 hidden" />
 
                 <div className="w-full max-w-[1300px] h-full p-4 overflow-hidden">

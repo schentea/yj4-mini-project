@@ -24,46 +24,48 @@ export default function NowTaday() {
                     {/*오른쪽중에 _ 왼쪽*/}
                     <div className="w-1/2 h-full  flex flex-col items-center xl:pt-10">
                         {/* 1 */}
-                        <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/gd2d15e92f3fd55593acf2fe3aecce107bb4d4e59fc20e3eaa11550e0e900103b6d94d00e22f5958b78c19067b7171a2b.jpg')] bg-cover bg-center">
-                            <p class="photo-container text-white  ">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet eos sunt vitae
-                                ipsa ad? Molestias, iure assumenda! Porro,
-                            </p>
+                        <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
+                         <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">
+                                   Lorem ipsum dolor,sit amet consectetur adipisicing elit. 
+                         </div>
                         </div>
                         <h2>사진 제목</h2>
                         {/* 2 */}
-                        <div className="z-10 w-[80%] hover:text-red-500 h-[28%]  p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/gd2d15e92f3fd55593acf2fe3aecce107bb4d4e59fc20e3eaa11550e0e900103b6d94d00e22f5958b78c19067b7171a2b.jpg')] bg-cover bg-center">
-                            <span className=" z-20 text-white cursor-pointer hover:text-red">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet eos sunt vitae
-                                ipsa ad? Molestias, iure assumenda! Porro,
-                            </span>
+                        <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
+                         <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">
+                                   Lorem ipsum dolor,sit amet consectetur adipisicing elit. 
+                         </div>
                         </div>
                         <h2>사진 제목</h2>
                         {/* 3 */}
-                        <div className="w-[80%] h-[28%] p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/gd2d15e92f3fd55593acf2fe3aecce107bb4d4e59fc20e3eaa11550e0e900103b6d94d00e22f5958b78c19067b7171a2b.jpg')] bg-cover bg-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet eos sunt vitae ipsa
-                            ad? Molestias, iure assumenda! Porro,
+                        <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
+                         <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">
+                                   Lorem ipsum dolor,sit amet consectetur adipisicing elit. 
+                         </div>
                         </div>
                         <h2>사진 제목</h2>
                     </div>
                     {/*오른쪽중에 _ 오른쪽*/}
                     <div className="w-1/2 h-full  flex flex-col items-center xl:pt-[100px]">
                         {/* 1 */}
-                        <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/gd2d15e92f3fd55593acf2fe3aecce107bb4d4e59fc20e3eaa11550e0e900103b6d94d00e22f5958b78c19067b7171a2b.jpg')] bg-cover bg-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet eos sunt vitae ipsa
-                            ad? Molestias, iure assumenda! Porro,
+                        <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
+                         <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">
+                                   Lorem ipsum dolor,sit amet consectetur adipisicing elit. 
+                         </div>
                         </div>
                         <h2>사진 제목</h2>
                         {/* 2 */}
-                        <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/gd2d15e92f3fd55593acf2fe3aecce107bb4d4e59fc20e3eaa11550e0e900103b6d94d00e22f5958b78c19067b7171a2b.jpg')] bg-cover bg-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet eos sunt vitae ipsa
-                            ad? Molestias, iure assumenda! Porro,
+                        <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
+                         <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">
+                                   Lorem ipsum dolor,sit amet consectetur adipisicing elit. 
+                         </div>
                         </div>
                         <h2>사진 제목</h2>
                         {/* 3 */}
-                        <div className="w-[80%] h-[30%] p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/gd2d15e92f3fd55593acf2fe3aecce107bb4d4e59fc20e3eaa11550e0e900103b6d94d00e22f5958b78c19067b7171a2b.jpg')] bg-cover bg-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet eos sunt vitae ipsa
-                            ad? Molestias, iure assumenda! Porro,
+                        <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
+                         <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">
+                                   Lorem ipsum dolor,sit amet consectetur adipisicing elit. 
+                         </div>
                         </div>
                         <h2>사진 제목</h2>
                     </div>
