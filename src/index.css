@@ -82,6 +82,7 @@
         grid-area: e;
     }
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

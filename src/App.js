@@ -5,6 +5,7 @@ import TravelTip from './Component/TravelTip';
 import JejuInstagram from './Component/JejuInstagram';
 
 import LayOut from './Component/LayOut';
+import KaKaoMap from './Component/KaKaoMap';
 function App() {
     return (
         <>
@@ -16,8 +17,11 @@ function App() {
                 <TravelTip />
                 {/* 제주도 인스타그램 */}
                 <JejuInstagram />
+                {/* 지도API */}
+                <KaKaoMap />
                 {/* 푸터 */}
             </LayOut>
+            {/* 업데이트하자 */}
         </>
     );
 }

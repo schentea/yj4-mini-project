@@ -8,7 +8,7 @@ export default function Header() {
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [isNavOpen, setIsNavOpen] = useState(window.innerWidth < 1280); // 해상도가 1280 미만인 경우에만 나브 메뉴가 열린 상태로 초기화
+    const [isNavOpen, setIsNavOpen] = useState(false); // 해상도가 1280 미만인 경우에만 나브 메뉴가 열린 상태로 초기화
 
     useEffect(() => {
         const fetchWeatherData = async () => {
@@ -94,7 +94,7 @@ export default function Header() {
                     <nav
                         className={`fixed ${
                             window.innerWidth >= 1280 ? 'hidden' : 'flex'
-                        } top-0 z-20 bg-slate-500 w-1/2 h-full xl:flex xl:space-x-32 text-white text-lg xl:text-3xl right-0 transition-transform duration-300 ${
+                        } top-0 z-20 bg-slate-500 w-1/2 h-full xl:flex xl:space-x-32  text-white text-lg xl:text-3xl right-0 transition-transform duration-300 ${
                             isNavOpen ? 'transform translate-x-0' : 'transform translate-x-full'
                         }`}
                     >
