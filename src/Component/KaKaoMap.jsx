@@ -222,7 +222,7 @@ export default function KaKaoMap() {
 
   return (
     <section id="kakaoMap">
-      <h2>제목</h2>
+      <h2>Map</h2>
       <div className="map_wrap">
         <div id="map"></div>
         <div id="menu_wrap" className="bg_white">
