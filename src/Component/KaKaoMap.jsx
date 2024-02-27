@@ -2,12 +2,24 @@ import React, { useEffect, useRef, useState } from "react";
 import "./KaKaoMap.css";
 import { IoSearch } from "react-icons/io5";
 import { PiMapPinLine } from "react-icons/pi";
+import { FaRegMap } from "react-icons/fa";
 
 export default function KaKaoMap() {
   const apiKey = "271da05001582197a052d62dc0a58327";
   const [search, setSearch] = useState("제주 공항");
   const [empty, setEmpty] = useState(true);
   const searchPlacesRef = useRef(null); // searchPlaces 함수를 저장할 ref
+  const [isFocused, setIsFocused] = useState(false); // 포커스 상태 관리
+  const [isHovered, setIsHovered] = useState(false); // 호버 상태 관리
+
+  // 포커스 또는 호버 상태에 따라 적절한 클래스를 반환하는 함수
+  const computeClassName = () => {
+    if (isFocused || isHovered) {
+      return "boxShadow";
+    }
+    return "";
+  };
+
   const formRef = useRef(null);
 
   // 폼 제출 핸들러
@@ -33,8 +45,8 @@ export default function KaKaoMap() {
 
         var mapContainer = document.getElementById("map"), // 지도를 표시할 div
           mapOption = {
-            center: new window.kakao.maps.LatLng(33.361667, 126.529167), // 지도의 중심좌표
-            level: 9, // 지도의 확대 레벨
+            center: new window.kakao.maps.LatLng(33.510001, 126.492778), // 지도의 중심좌표
+            level: 5, // 지도의 확대 레벨
           };
 
         // 지도를 생성합니다
@@ -229,7 +241,10 @@ export default function KaKaoMap() {
 
   return (
     <section id="kakaoMap">
-      <h2>Map</h2>
+      <h2>
+        제주도, 지도로 먼저 살펴보기
+        <FaRegMap className="inline-block" />
+      </h2>
       <div id="mapBtnWrap">
         {mapArr.map((item, index) => (
           <button
@@ -251,8 +266,8 @@ export default function KaKaoMap() {
           <div className="option">
             <div>
               <form onSubmit={handleSubmit} ref={formRef}>
-                <div id="searchWrap">
-                  <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} id="keyword" size="15" />
+                <div id="searchWrap" className={computeClassName()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                  <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} id="keyword" size="15" />
                   <button type="submit">
                     <IoSearch size="25px" color="#ef6d00" />
                   </button>
