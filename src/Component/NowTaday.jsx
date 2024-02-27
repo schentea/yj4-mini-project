@@ -3,7 +3,7 @@ import { jeju } from "../Api";
 
 export default function NowTaday() {
   const { data, isLoading } = useQuery("관광지사진", jeju);
-  const limitedData = data ? data.items.slice(0, 5) : [];
+  const limitedData = data ? data.items.slice(0, 4) : [];
   const limitedData2 = data ? data.items.slice(6, 11) : [];
 
   return (
