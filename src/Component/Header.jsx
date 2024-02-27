@@ -76,7 +76,6 @@ export default function Header() {
             <RxHamburgerMenu onClick={handleNavOpen} className=" cursor-pointer" />
           </nav>
           <nav className="hidden xl:block">
-            {" "}
             <div className="text-[32px] h-full text-white xl:flex space-x-[10vw] hidden items-center">
               <div>
                 <div className="flex items-center">

@@ -241,12 +241,12 @@ export default function KaKaoMap() {
 
   return (
     <section id="kakaoMap">
-      <div className=" flex justify-center items-center">
-        <h2>
-          제주도, 지도로 <span className=" font-bold text-[#ef6d00]">먼저 살펴보기&nbsp;</span>
-        </h2>
+      <h2>
+        제주도, 지도로&nbsp;
+        <span className=" font-bold text-[#ef6d00]">먼저 살펴보기&nbsp;</span>
         <MdGpsFixed className="inline-block" size="40px" />
-      </div>
+      </h2>
+
       <div id="mapBtnWrap">
         {mapArr.map((item, index) => (
           <button
