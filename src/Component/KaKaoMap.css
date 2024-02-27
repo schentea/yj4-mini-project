@@ -3,6 +3,11 @@
   word-break: keep-all;
 }
 
+.carousel {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 #kakaoMap h2 {
   text-align: center;
 }
