@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./KaKaoMap.css";
 import { IoSearch } from "react-icons/io5";
+import { PiMapPinLine } from "react-icons/pi";
 
 export default function KaKaoMap() {
   const apiKey = "271da05001582197a052d62dc0a58327";
   const [search, setSearch] = useState("제주 공항");
   const [empty, setEmpty] = useState(true);
   const searchPlacesRef = useRef(null); // searchPlaces 함수를 저장할 ref
+  const formRef = useRef(null);
 
   // 폼 제출 핸들러
   const handleSubmit = (event) => {
@@ -222,15 +224,33 @@ export default function KaKaoMap() {
     });
   }, [search]);
 
+  // 지도 버튼 목록
+  const mapArr = ["한라산 공원", "제주민속촌", "동문시장", "제주 주상절리대", "귤귤귤"];
+
   return (
     <section id="kakaoMap">
       <h2>Map</h2>
+      <div id="mapBtnWrap">
+        {mapArr.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setSearch(item);
+              setTimeout(() => {
+                formRef.current.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+              }, 150);
+            }}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
       <div className="map_wrap">
         <div id="map"></div>
         <div id="menu_wrap">
           <div className="option">
             <div>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={formRef}>
                 <div id="searchWrap">
                   <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} id="keyword" size="15" />
                   <button type="submit">
@@ -241,7 +261,14 @@ export default function KaKaoMap() {
             </div>
           </div>
           <hr />
-          <ul id="placesList">{empty && <p>키워드를 검색해보세요</p>}</ul>
+          <ul id="placesList">
+            {empty && (
+              <p id="list404Txt">
+                <PiMapPinLine size="100px" color="#777" />
+                키워드를 입력하거나 버튼을 눌러서 제주도의 관광지를 확인해보세요.
+              </p>
+            )}
+          </ul>
           <div id="pagination"></div>
         </div>
       </div>
