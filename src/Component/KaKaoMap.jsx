@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./KaKaoMap.css";
+import { IoSearch } from "react-icons/io5";
 
 export default function KaKaoMap() {
   const apiKey = "271da05001582197a052d62dc0a58327";
@@ -125,15 +126,16 @@ export default function KaKaoMap() {
         // 검색결과 항목을 Element로 반환하는 함수입니다
         function getListItem(index, places) {
           var el = document.createElement("li"),
-            itemStr = '<span class="markerbg marker_' + (index + 1) + '"></span>' + '<div class="info">' + "   <h5>" + places.place_name + "</h5>";
+            itemStr = `<span class="markerbg marker_${index + 1}"></span><div class="info">   <h5 class="add">${places.place_name}</h5>`;
 
           if (places.road_address_name) {
-            itemStr += "    <span>" + places.road_address_name + "</span>" + '   <span class="jibun gray">' + places.address_name + "</span>";
+            itemStr += `<span>${places.road_address_name}</span>`;
+            // <span class="jibun gray">${places.address_name}</span>
           } else {
-            itemStr += "    <span>" + places.address_name + "</span>";
+            itemStr += `<span>${places.address_name}</span>`;
           }
 
-          itemStr += '  <span class="tel">' + places.phone + "</span>" + "</div>";
+          itemStr += `  <span class="tel">${places.phone}</span></div>`;
 
           el.innerHTML = itemStr;
           el.className = "item";
@@ -225,12 +227,16 @@ export default function KaKaoMap() {
       <h2>Map</h2>
       <div className="map_wrap">
         <div id="map"></div>
-        <div id="menu_wrap" className="bg_white">
+        <div id="menu_wrap">
           <div className="option">
             <div>
               <form onSubmit={handleSubmit}>
-                키워드 : <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} id="keyword" size="15" />
-                <button type="submit">검색하기</button>
+                <div id="searchWrap">
+                  <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} id="keyword" size="15" />
+                  <button type="submit">
+                    <IoSearch size="25px" color="#ef6d00" />
+                  </button>
+                </div>
               </form>
             </div>
           </div>
