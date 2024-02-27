@@ -31,35 +31,35 @@ export default function JejuInstagram() {
               >
                 <div className="flex justify-center items-center">
                   <img
-                    src={data.data[0].media_url}
+                    src={data?.data[0].media_url}
                     alt="empty"
                     className="w-full h-[680px] object-cover object-center"
                   />
                 </div>
                 <div className="flex justify-center items-center">
                   <img
-                    src={data.data[1].media_url}
+                    src={data?.data[1].media_url}
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
                 <div className="flex justify-center items-center">
                   <img
-                    src={data.data[2].media_url}
+                    src={data?.data[2].media_url}
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center "
                   />
                 </div>
                 <div className=" flex justify-center items-center ">
                   <img
-                    src={data.data[3].media_url}
+                    src={data?.data[3].media_url}
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center"
                   />
                 </div>
                 <div className=" flex justify-center items-center  ">
                   <img
-                    src={data.data[4].media_url}
+                    src={data?.data[4].media_url}
                     alt="empty"
                     className="w-full h-[330px] object-cover object-center"
                   />
