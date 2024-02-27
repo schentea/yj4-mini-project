@@ -98,7 +98,7 @@ export default function Header() {
               <p>SNS</p>
             </div>
           </nav>
-          <motion.nav className={`fixed ${window.innerWidth >= 1280 ? "hidden" : "flex"} top-0 z-20 bg-gray-500/60 backdrop-blur-xl w-1/3 h-full xl:flex xl:space-x-32  text-white text-lg xl:text-3xl right-0 transition-transform duration-300 ${isNavOpen ? "transform translate-x-0" : "transform translate-x-full"}`} {...(isNavOpen ? { initial: "start", animate: "end" } : {})} transition={{ delayChildren: 0.1, staggerChildren: 0.1 }}>
+          <motion.nav className={`fixed ${window.innerWidth >= 1280 ? "hidden" : "flex"} top-0 z-20 bg-gray-500/60 backdrop-blur-xl min-w-[300px] max-w-[500px] h-full xl:flex xl:space-x-32  text-white text-lg xl:text-3xl right-0 transition-transform duration-300 ${isNavOpen ? "transform translate-x-0" : "transform translate-x-full"}`} initial={false} animate={isNavOpen ? "end" : "start"} transition={{ delayChildren: 0.05, staggerChildren: 0.1 }}>
             <FiX onClick={handleNavClose} className="text-[32px] absolute top-6 right-6 cursor-pointer" />
             <div className="mt-24 ml-[50px] text-[32px] space-y-10 h-full">
               <motion.div variants={item} className="mb-16">
