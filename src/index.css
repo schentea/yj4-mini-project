@@ -23,7 +23,6 @@
     }
 }
 
-
 #Main_Grid {
     display: grid;
 
@@ -51,7 +50,7 @@
 #Carousel Button {
     display: none;
 }
-@media screen and (min-width: 1918px) {
+@media screen and (min-width: 1800px) {
     #hidden_img {
         display: block;
     }
