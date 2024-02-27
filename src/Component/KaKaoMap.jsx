@@ -1,12 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./KaKaoMap.css";
 import { IoSearch } from "react-icons/io5";
+import { PiMapPinLine } from "react-icons/pi";
+import { FaRegMap } from "react-icons/fa";
 
 export default function KaKaoMap() {
   const apiKey = "271da05001582197a052d62dc0a58327";
   const [search, setSearch] = useState("제주 공항");
   const [empty, setEmpty] = useState(true);
   const searchPlacesRef = useRef(null); // searchPlaces 함수를 저장할 ref
+  const [isFocused, setIsFocused] = useState(false); // 포커스 상태 관리
+  const [isHovered, setIsHovered] = useState(false); // 호버 상태 관리
+
+  // 포커스 또는 호버 상태에 따라 적절한 클래스를 반환하는 함수
+  const computeClassName = () => {
+    if (isFocused || isHovered) {
+      return "boxShadow";
+    }
+    return "";
+  };
+
+  const formRef = useRef(null);
 
   // 폼 제출 핸들러
   const handleSubmit = (event) => {
@@ -31,8 +45,8 @@ export default function KaKaoMap() {
 
         var mapContainer = document.getElementById("map"), // 지도를 표시할 div
           mapOption = {
-            center: new window.kakao.maps.LatLng(33.361667, 126.529167), // 지도의 중심좌표
-            level: 9, // 지도의 확대 레벨
+            center: new window.kakao.maps.LatLng(33.510001, 126.492778), // 지도의 중심좌표
+            level: 5, // 지도의 확대 레벨
           };
 
         // 지도를 생성합니다
@@ -222,17 +236,38 @@ export default function KaKaoMap() {
     });
   }, [search]);
 
+  // 지도 버튼 목록
+  const mapArr = ["한라산 공원", "제주민속촌", "동문시장", "제주 주상절리대", "귤귤귤"];
+
   return (
     <section id="kakaoMap">
-      <h2>Map</h2>
+      <h2>
+        제주도, 지도로 먼저 살펴보기
+        <FaRegMap className="inline-block" />
+      </h2>
+      <div id="mapBtnWrap">
+        {mapArr.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setSearch(item);
+              setTimeout(() => {
+                formRef.current.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+              }, 150);
+            }}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
       <div className="map_wrap">
         <div id="map"></div>
         <div id="menu_wrap">
           <div className="option">
             <div>
-              <form onSubmit={handleSubmit}>
-                <div id="searchWrap">
-                  <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} id="keyword" size="15" />
+              <form onSubmit={handleSubmit} ref={formRef}>
+                <div id="searchWrap" className={computeClassName()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                  <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} id="keyword" size="15" />
                   <button type="submit">
                     <IoSearch size="25px" color="#ef6d00" />
                   </button>
@@ -241,7 +276,14 @@ export default function KaKaoMap() {
             </div>
           </div>
           <hr />
-          <ul id="placesList">{empty && <p>키워드를 검색해보세요</p>}</ul>
+          <ul id="placesList">
+            {empty && (
+              <p id="list404Txt">
+                <PiMapPinLine size="100px" color="#777" />
+                키워드를 입력하거나 버튼을 눌러서 제주도의 관광지를 확인해보세요.
+              </p>
+            )}
+          </ul>
           <div id="pagination"></div>
         </div>
       </div>

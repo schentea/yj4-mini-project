@@ -1,5 +1,6 @@
 * {
   --orange: #ef6d00;
+  word-break: keep-all;
 }
 
 #kakaoMap h2 {
@@ -21,7 +22,26 @@
   position: relative;
   width: 80%;
   max-width: 1300px;
-  margin: 50px auto;
+  margin: 20px auto 50px;
+}
+
+#mapBtnWrap {
+  margin: 50px auto 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#mapBtnWrap button {
+  background: #ffdec3;
+  padding: 10px 20px;
+  margin: 0 15px;
+  border-radius: 20px;
+  font-size: 17px;
+  transition: all 0.2s;
+}
+
+#mapBtnWrap button:hover {
+  transform: translateY(-7px);
 }
 
 #map {
@@ -63,6 +83,11 @@
   background: white;
 }
 
+#menu_wrap #searchWrap.boxShadow {
+  background: #fafafa;
+  box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
 #menu_wrap #searchWrap input {
   padding: 10px 0 10px 5px;
   background: none;
@@ -73,9 +98,8 @@
 
 #menu_wrap hr {
   display: block;
-  height: 1px;
   border: 0;
-  border-top: 2px solid #5f5f5f;
+  border-top: 4px double black;
   margin: 10px 0 5px;
 }
 #menu_wrap .option {
@@ -87,6 +111,17 @@
 #menu_wrap .option button {
   margin-left: 5px;
 }
+#placesList #list404Txt {
+  text-align: center;
+  margin: 80px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #777;
+}
+#placesList #list404Txt svg {
+  margin: 0 auto 20px;
+}
+
 #placesList li {
   list-style: none;
   font-size: 13px;
@@ -97,7 +132,7 @@
 }
 #placesList .item {
   position: relative;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #bbb;
   overflow: hidden;
   cursor: pointer;
   min-height: 65px;
@@ -179,7 +214,7 @@
   background-position: 0 -654px;
 }
 #pagination {
-  margin: 10px auto;
+  margin: 10px auto 5px;
   text-align: center;
 }
 #pagination a {
@@ -192,5 +227,29 @@
   color: #666;
 }
 
-@media screen and(max-width:1024px) {
+@media screen and (max-width: 1024px) {
+  .map_wrap {
+    width: 95%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #mapBtnWrap {
+    width: 95%;
+  }
+
+  #map {
+    height: 500px;
+  }
+
+  #menu_wrap {
+    position: relative;
+    inset: inherit;
+    height: 450px;
+    width: 350px;
+    margin: 0 auto 15px;
+  }
+
+  #menu_wrap #searchWrap {
+    justify-content: space-between;
+  }
 }
