@@ -57,6 +57,7 @@
 
 #map {
   height: 650px;
+  border-radius: 10px;
 }
 
 #menu_wrap {
