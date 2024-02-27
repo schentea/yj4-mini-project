@@ -3,6 +3,7 @@ import logo from "../image/logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiX } from "react-icons/fi";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [weatherData, setWeatherData] = useState(null);
@@ -58,6 +59,15 @@ export default function Header() {
   const { icon } = weather[0];
   const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
 
+  const item = {
+    start: { opacity: 0, y: 30 },
+    end: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 300, damping: 24 },
+    },
+  };
+
   return (
     <div>
       <header className="w-full h-[100vh] relative">
@@ -70,15 +80,15 @@ export default function Header() {
           <h2 className="mb-5 ">자연이 숨쉬는 곳</h2>
           <h1 className="">빛나는 제주</h1>
         </div>
-        <div className="absolute inset-x-0 top-4 flex justify-between items-center px-6 xl:px-16 h-[80px] xl:h-[120px]">
-          <img src={logo} alt="로고" className="h-[70px] xl:h-full" />
-          <nav className="text-[32px] text-white xl:hidden">
+        <img src={logo} alt="로고" className="absolute top-4 left-2 h-[70px] xl:h-[120px]" />
+        <div className="absolute inset-x-0 top-4 grid px-6 xl:px-8 h-[80px] xl:h-[120px]">
+          <nav className="text-[32px] text-white xl:hidden justify-self-end">
             <RxHamburgerMenu onClick={handleNavOpen} className=" cursor-pointer" />
           </nav>
-          <nav className="hidden xl:block">
-            <div className="text-[32px] h-full text-white xl:flex space-x-[10vw] hidden items-center">
+          <nav className="hidden xl:block  justify-self-end">
+            <div className="text-[26px] text-white xl:flex space-x-[4vw] hidden items-center">
               <div>
-                <div className="flex items-center">
+                <div className="flex items-center mr-3">
                   <img src={iconUrl} alt="날씨 아이콘" className="w-[78px]" />
                   <p>{temp}℃</p>
                 </div>
@@ -88,20 +98,20 @@ export default function Header() {
               <p>SNS</p>
             </div>
           </nav>
-          <nav className={`fixed ${window.innerWidth >= 1280 ? "hidden" : "flex"} top-0 z-20 bg-slate-500 w-1/2 h-full xl:flex xl:space-x-32  text-white text-lg xl:text-3xl right-0 transition-transform duration-300 ${isNavOpen ? "transform translate-x-0" : "transform translate-x-full"}`}>
+          <motion.nav className={`fixed ${window.innerWidth >= 1280 ? "hidden" : "flex"} top-0 z-20 bg-gray-500/60 backdrop-blur-xl w-1/3 h-full xl:flex xl:space-x-32  text-white text-lg xl:text-3xl right-0 transition-transform duration-300 ${isNavOpen ? "transform translate-x-0" : "transform translate-x-full"}`} {...(isNavOpen ? { initial: "start", animate: "end" } : {})} transition={{ delayChildren: 0.1, staggerChildren: 0.1 }}>
             <FiX onClick={handleNavClose} className="text-[32px] absolute top-6 right-6 cursor-pointer" />
-            <div className="mt-24 ml-[100px] text-[32px] space-y-10 h-full">
-              <div className="mb-16">
+            <div className="mt-24 ml-[50px] text-[32px] space-y-10 h-full">
+              <motion.div variants={item} className="mb-16">
                 <div className="flex items-center">
                   <img src={iconUrl} alt="날씨 아이콘" className="w-[70px]" />
                   <p>{temp}℃</p>
                 </div>
-              </div>
-              <p>관광지</p>
-              <p>여행 TIP</p>
-              <p>SNS</p>
+              </motion.div>
+              <motion.p variants={item}>관광지</motion.p>
+              <motion.p variants={item}>여행 TIP</motion.p>
+              <motion.p variants={item}>SNS</motion.p>
             </div>
-          </nav>
+          </motion.nav>
         </div>
       </header>
     </div>
