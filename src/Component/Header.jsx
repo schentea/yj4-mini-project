@@ -102,6 +102,7 @@ export default function Header() {
             <FiX onClick={handleNavClose} className="text-[32px] absolute top-6 right-6 cursor-pointer" />
             <div className="mt-24 ml-[50px] text-[32px] space-y-10 h-full">
               <motion.div variants={item} className="mb-16">
+                <p className="text-[20px] ml-[18px]">지금 제주도는</p>
                 <div className="flex items-center">
                   <img src={iconUrl} alt="날씨 아이콘" className="w-[70px]" />
                   <p>{temp}℃</p>
