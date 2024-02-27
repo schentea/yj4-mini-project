@@ -1,5 +1,3 @@
-const USER_ID = process.env.REACT_APP_USER_ID;
-const TOKEN = process.env.REACT_APP_TOKEN;
 //제주관광공사 api
 export async function jeju() {
   try {
@@ -15,7 +13,7 @@ export async function jeju() {
 export async function insta() {
   try {
     return await fetch(
-      `https://graph.instagram.com/${USER_ID}/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=${TOKEN}`
+      `https://graph.instagram.com/25034924716155779/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=IGQWRPclJjUUpWQ1V6eHZA3WmZA5TlREeGNXSlZA4eHF0WXlEbGE2QnY2OXhBZAEdrMFo1R0ZAlZAzBWWi1vbERRb2c1SGhHSjhvOWVhMTFoX0duX09XS0VlenFUR2FFWmFIY21fakl5QWx3cy11QW1qYTRXUExiNEZAFTENTVHM2cDlZAWXpKUmcZD`
     ).then((res) => res.json());
   } catch (error) {
     console.log(error);
