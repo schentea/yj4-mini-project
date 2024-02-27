@@ -11,10 +11,10 @@ function App() {
     <>
       {/* 헤더 */}
       <LayOut>
-        {/* 지금 제주도! 여기어떄요? */}
-        <NowTaday />
         {/* 준비하고 떠나는 여행TIP */}
         <TravelTip />
+        {/* 지금 제주도! 여기어떄요? */}
+        <NowTaday />
         {/* 제주도 인스타그램 */}
         <JejuInstagram />
         {/* 지도API */}
