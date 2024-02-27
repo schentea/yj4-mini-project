@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./KaKaoMap.css";
 import { IoSearch } from "react-icons/io5";
 import { PiMapPinLine } from "react-icons/pi";
-import { FaRegMap } from "react-icons/fa";
+import { MdGpsFixed } from "react-icons/md";
 
 export default function KaKaoMap() {
   const apiKey = "271da05001582197a052d62dc0a58327";
@@ -241,10 +241,12 @@ export default function KaKaoMap() {
 
   return (
     <section id="kakaoMap">
-      <h2>
-        제주도, 지도로 먼저 살펴보기
-        <FaRegMap className="inline-block" />
-      </h2>
+      <div className=" flex justify-center items-center">
+        <h2>
+          제주도, 지도로 <span className=" font-bold text-[#ef6d00]">먼저 살펴보기&nbsp;</span>
+        </h2>
+        <MdGpsFixed className="inline-block" size="40px" />
+      </div>
       <div id="mapBtnWrap">
         {mapArr.map((item, index) => (
           <button
@@ -256,7 +258,7 @@ export default function KaKaoMap() {
               }, 150);
             }}
           >
-            {item}
+            # {item}
           </button>
         ))}
       </div>

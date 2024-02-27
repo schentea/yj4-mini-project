@@ -3,10 +3,6 @@
   word-break: keep-all;
 }
 
-#kakaoMap h2 {
-  text-align: center;
-}
-
 .map_wrap,
 .map_wrap * {
   margin: 0;
@@ -26,18 +22,22 @@
 }
 
 #mapBtnWrap {
-  margin: 50px auto 30px;
+  margin: 60px auto 30px;
   display: flex;
   justify-content: center;
 }
 
 #mapBtnWrap button {
-  background: #ffdec3;
+  background: #ffefe1;
+  /* border: 2px solid var(--orange);
+  color: var(--orange); */
   padding: 10px 20px;
   margin: 0 15px;
   border-radius: 20px;
   font-size: 17px;
   transition: all 0.2s;
+  box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.1);
+  font-weight: 500;
 }
 
 #mapBtnWrap button:hover {
