@@ -76,7 +76,7 @@ export default function Header() {
             <source src={Video} type="video/mp4" />
           </video>
         </div>
-        <motion.div opacity="true" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="absolute top-[50%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 text-white z-10">
+        <motion.div opacity="true" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="absolute top-[50%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 text-white z-10">
           <h2 className="mb-5">자연이 숨쉬는 곳</h2>
           <h1 className="drop-shadow-2xl shadow-black">빛나는 제주</h1>
         </motion.div>
