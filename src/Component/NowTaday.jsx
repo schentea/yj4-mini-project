@@ -32,7 +32,7 @@ export default function NowTaday() {
               {limitedData.map((item, index) => (
                 <div key={index}>
                   <div
-                    className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 xl:mt-32 shadow-lg  `}
+                    className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 mb-3 xl:mt-32 shadow-lg  `}
                     style={{
                       backgroundImage: `url('${item?.repPhoto?.photoid?.thumbnailpath}')`,
                       backgroundRepeat: "no-repeat",
@@ -40,10 +40,10 @@ export default function NowTaday() {
                       backgroundPosition: "center",
                     }}
                   >
-                    <div className="h-[50%] text-[12px] sm:text-[15px] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500 ">{item.introduction}</div>
+                    <div className="h-[50%] xl:h-[30%]  text-[12px] sm:text-[15px] p-4 bg-black/50 backdrop-blur-sm absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500 ">{item.introduction}</div>
                   </div>
                   <div className="text-center w-full xl:w-[80%]">
-                    <h2 className="xl:text-3xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
+                    <h2 className="xl:text-2xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
                   </div>
                 </div>
               ))}
@@ -56,7 +56,7 @@ export default function NowTaday() {
               {limitedData2.map((item, index) => (
                 <div key={index}>
                   <div
-                    className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 xl:mt-40 shadow-lg `}
+                    className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 mb-3 xl:mt-40 shadow-lg `}
                     style={{
                       backgroundImage: `url('${item?.repPhoto?.photoid?.thumbnailpath}')`,
                       backgroundRepeat: "no-repeat",
@@ -64,10 +64,10 @@ export default function NowTaday() {
                       backgroundPosition: "center",
                     }}
                   >
-                    <div className="h-[50%] text-[12px] sm:text-[15px] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">{item.introduction}</div>
+                    <div className="h-[50%] xl:h-[30%] text-[12px] sm:text-[15px] p-4 bg-black/50 backdrop-blur-sm absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">{item.introduction}</div>
                   </div>
                   <div className=" w-full xl:w-[80%]  text-center">
-                    <h2 className="xl:text-3xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
+                    <h2 className="xl:text-2xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
                   </div>
                 </div>
               ))}
