@@ -17,7 +17,7 @@ function App() {
         {/* 지금 제주도! 여기어떄요? */}
         <NowTaday />
         {/* 제주도 인스타그램 */}
-        {/* <JejuInstagram /> */}
+        <JejuInstagram />
         {/* 지도API */}
         <KaKaoMap />
         {/* 푸터 */}
