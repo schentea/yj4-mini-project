@@ -30,7 +30,7 @@ export default function NowTaday() {
             {/* 1 */}
             <div className=" relative w-full xl:w-[80%] h-[300px]  ">
               {limitedData.map((item, index) => (
-                <>
+                <div key={index}>
                   <div
                     className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 xl:mt-32 shadow-lg  `}
                     style={{
@@ -45,7 +45,7 @@ export default function NowTaday() {
                   <div className="text-center w-full xl:w-[80%]">
                     <h2 className="xl:text-3xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function NowTaday() {
             {/* 1 */}
             <div className=" relative w-full xl:w-[80%] h-[300px] ">
               {limitedData2.map((item, index) => (
-                <>
+                <div key={index}>
                   <div
                     className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 xl:mt-40 shadow-lg `}
                     style={{
@@ -69,7 +69,7 @@ export default function NowTaday() {
                   <div className=" w-full xl:w-[80%]  text-center">
                     <h2 className="xl:text-3xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </div>
