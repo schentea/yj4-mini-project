@@ -9,7 +9,7 @@ export default function TravelTip() {
   return (
     <>
       <section className="w-full min-h-screen flex justify-center">
-        <div className="w-full h-full p-[0px] sm:p-12 max-w-[1300px]">
+        <div className="w-full h-full xl:p-[0px] sm:p-12 max-w-[1300px] p-2">
           {/* TITLE */}
           <div className="w-full flex flex-col items-center mt-16 mb-20">
             {/* <h2 className="flex items-center">
@@ -23,7 +23,7 @@ export default function TravelTip() {
             <p className="mt-2 text-lg">알고가면 더 재미있는 제주도 여행 정보</p>
           </div>
           {/* 이미지 통괄  */}
-          <div className="flex justify-between xl:mb-32 mb-[500px] relative lg:mb-[650px]">
+          <div className="flex justify-between xl:mb-32 mb-[73vw] relative ">
             {/* 왼쪽 이미지 */}
             <div className="xl:w-[30%] mr-4">
               <div className="w-full bg-gray-700 flex flex-col items-center rounded-2xl">
@@ -81,7 +81,7 @@ export default function TravelTip() {
             </div>
           </div>
           {/* 아래쪽 컨텐츠 */}
-          <div className="w-full h-[100px] border-1 border-[#BCB1A7] rounded-3xl flex justify-around items-center px-[4px] sm:px-16">
+          <div className="w-full h-[100px] border-1 border-[#BCB1A7] rounded-3xl flex justify-around items-center px-[4px] sm:px-16 mb-12">
             <div className="xl:text-[24px] flex items-center">
               <img src={minilogo1} alt="" className="w-8 mr-2" />
               <span>면세 쇼핑몰</span>

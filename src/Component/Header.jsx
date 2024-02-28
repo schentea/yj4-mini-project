@@ -76,10 +76,16 @@ export default function Header() {
             <source src={Video} type="video/mp4" />
           </video>
         </div>
-        <div className="absolute top-[50%] left-[10%] transform translate(-50%, -50%) text-white z-10">
-          <h2 className="mb-5 ">자연이 숨쉬는 곳</h2>
+        <motion.div
+          opacity
+          initial={{ opacity: 0, y: -100 }} // 초기 투명도와 위치 설정
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+          className="absolute top-[50%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 text-white z-10"
+        >
+          <h2 className="mb-5">자연이 숨쉬는 곳</h2>
           <h1 className="">빛나는 제주</h1>
-        </div>
+        </motion.div>
         <img src={logo} alt="로고" className="absolute top-4 left-2 h-[70px] xl:h-[120px]" />
         <div className="absolute inset-x-0 top-4 grid px-6 xl:px-8 h-[80px] xl:h-[120px]">
           <nav className="text-[32px] text-white xl:hidden justify-self-end">
