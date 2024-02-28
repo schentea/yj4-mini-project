@@ -1,4 +1,4 @@
-import Video from '../video/Headervideo.mp4';
+import Video from '../video/water.mp4';
 import logo from '../image/logo.png';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FiX } from 'react-icons/fi';
