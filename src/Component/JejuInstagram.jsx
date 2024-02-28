@@ -29,7 +29,7 @@ export default function JejuInstagram() {
               <div id="Main_Grid" className="w-full h-full text-white grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4">
                 {images.map((imageUrl, index) => (
                   <div key={index} className="flex justify-center items-center">
-                    <img src={imageUrl} alt={`img-${index}`} className="w-full h-auto object-cover object-center" style={{ minWidth: 0 }} />
+                    <img src={imageUrl} alt={`img-${index}`} className="w-full h-auto object-cover object-center rounded-lg" style={{ minWidth: 0 }} />
                   </div>
                 ))}
               </div>
