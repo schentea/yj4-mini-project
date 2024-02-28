@@ -20,8 +20,8 @@ function App() {
         <JejuInstagram />
         {/* 지도API */}
         <KaKaoMap />
-        {/* 푸터 */}
         <ChatBot />
+        {/* 푸터 */}
       </LayOut>
       {/* 업데이트하자 */}
     </>
