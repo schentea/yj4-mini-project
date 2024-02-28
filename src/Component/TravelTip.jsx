@@ -23,7 +23,7 @@ export default function TravelTip() {
             <p className="mt-2 text-lg">알고가면 더 재미있는 제주도 여행 정보</p>
           </div>
           {/* 이미지 통괄  */}
-          <div className="flex justify-between xl:mb-32 mb-[73vw] relative ">
+          <div className="flex justify-between mb-[80vw] lg:mb-[50vw] xl:mb-32 relative ">
             {/* 왼쪽 이미지 */}
             <div className="xl:w-[30%] mr-4">
               <div className="w-full bg-gray-700 flex flex-col items-center rounded-2xl">
@@ -81,7 +81,7 @@ export default function TravelTip() {
             </div>
           </div>
           {/* 아래쪽 컨텐츠 */}
-          <div className="w-full h-[100px] border-1 border-[#BCB1A7] rounded-3xl flex justify-around items-center px-[4px] sm:px-16 mb-12">
+          <div className="w-full h-[80px] md:h-[100px] border-1 border-[#BCB1A7] rounded-3xl flex justify-around items-center px-[4px] sm:px-16 mb-12">
             <div className="xl:text-[24px] flex items-center">
               <img src={minilogo1} alt="" className="w-8 mr-2" />
               <span>면세 쇼핑몰</span>

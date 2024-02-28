@@ -22,7 +22,7 @@ export default function NowTaday() {
         {/* 왼쪽 공간 */}
         <div className="w-1/3  xl:h-screen flex flex-col justify-center items-center  mx-auto xl:ml-20  xl:sticky xl:top-0  ">
           {/* 주황색 제목 */}
-          <div className="w-[500px] text-center md:text-left xl:ml-32 overflow-hidden  ">
+          <div className="min-w-[370px] max-w-[500px] lg:w-[500px] text-center md:text-left xl:ml-32 overflow-hidden  ">
             <div className="mb-4 mt-16 ">
               <h2 className="font-bold xl:text-7xl text-6xl  text-[#EF6D00] ">지금 제주도!</h2>
               <h2 className="font-bold xl:text-7xl text-6xl text-[#EF6D00]">여기 어때요?</h2>
@@ -34,7 +34,7 @@ export default function NowTaday() {
           </div>
         </div>
         {/* 오른쪽 공간 */}
-        <div className="w-2/3 h-full flex xl:ml-16 space-x-4">
+        <div className="w-[100%] px-4 md:w-2/3 h-full flex xl:ml-16 space-x-4">
           {/*오른쪽중에 _ 왼쪽*/}
           <div className="w-1/2 h-full flex flex-col items-center xl:pt-10 overflow-hidden">
             {/* 1 */}
