@@ -1,4 +1,5 @@
-import FooterLogo from "../image/footerlogo.jpg";
+import foot1 from "../image/foot1.png";
+import foot2 from "../image/foot2.svg";
 
 export default function Footer() {
   return (
@@ -7,21 +8,27 @@ export default function Footer() {
         {/* 푸터 왼쪽 */}
         <div className="xl:w-1/2 xl:ml-16 ml-8 h-full flex flex-col xl:justify-center text-[#666]">
           <div className="mb-2">
-            <h2 className="text-4xl font-bold">API</h2>
+            <h2 className="text-3xl font-bold uppercase">site map</h2>
           </div>
-          <div className="flex flex-wrap xl:gap-x-6 gap-x-16 gap-y-1 font-semibold mr-8">
-            <p>Instagram API</p>
-            <p>Visitjeju Tour API</p>
-            <p>Weather API</p>
+          <div id="footMap" className="flex flex-wrap xl:gap-x-6 gap-x-16 gap-y-1 font-semibold mr-8 text-xl">
+            <a href="#travle">
+              <p>여행 TIP</p>
+            </a>
+            <a href="#now">
+              <p>관광지</p>
+            </a>
+            <a href="#sns">
+              <p>인스타그램</p>
+            </a>
+            <a href="#kakaoMap">
+              <p>지도</p>
+            </a>
           </div>
         </div>
         {/* 푸터 오른쪽 */}
-        <div className="xl:w-1/2 min-w-[200px] flex flex-wrap xl:justify-end gap-x-1 items-center xl:mr-16 ml-8">
-          <img
-            src="https://s3-alpha-sig.figma.com/img/6bf0/5ce2/f84a210f5c24628860b69e4ccb51a023?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n5-RKxPRXRAdPlg~6Q-s1SVplxTGi5zgqIGA8vT7N~eH57VPu2fOlMnl71V7pd~lWeuVWmzDpTQAs5852ywsUxyP8sLtMG5lW2E8wJzLYJFGQ91VAhYp~weO-3tjKmtCLv8Uc-y~uevAIyDloELzLqSrzrpU8lJmbtnyOgDQszfjbKRHi1EC4CWNNRSB6RL51A1g~-TkW64v9o5NGX0XzDrH~1kGaM0deH~3iTIrF4nirQcWZMPxsyz9azuB2rMueuy88WGndIFyvMiq6ZXu8XDPjApy~Nbd3EhyatTZbLKOFeh40xEhKfFnpfort9w6k2A745JsXOtSM7YD-9FMrg__"
-            alt="img"
-          />
-          <img className="xl:h-[60%] w-[200px]" src={FooterLogo} alt="img" />
+        <div className="xl:w-1/2 min-w-[200px] flex flex-wrap xl:justify-end gap-x-1 pt-10 xl:pt-2 items-start xl:mr-16 ml-8">
+          <img src={foot1} alt="img" />
+          <img className="xl:h-[60%] w-[200px]" src={foot2} alt="img" />
         </div>
       </footer>
     </>

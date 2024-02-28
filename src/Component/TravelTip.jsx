@@ -27,10 +27,12 @@ export default function TravelTip() {
             {/* 왼쪽 이미지 */}
             <div className="xl:w-[30%] mr-4">
               <div className="w-full bg-gray-700 flex flex-col items-center rounded-2xl">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/b0e8/46cd/a0b30377f65303f4052d53b9405db70a?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZKE89tFBPTXsQ6A1gSSZB~CrihDA7GBXh8TncSWP6~M3~WVel6GXjfXUq1YuH1CUp6IIb5kbWbfOF9jx7Gi7kEMdrt28ebkVwj6K-RvaY1KUcDcZZz6qBha9HC3RbJBGZrXpVQrKixvSualtKBaJquNWrERohBdqaQJ0M5ubFeMtqbq60SQx7-1D1qPMv5LPgjAa0VE1K3LyqBmRDuSH3wtoeNVOu2MAXSndAuugbDLvryVJfoh-CyPakyUwH2j6ajZUsQA52Qqyfd~clqgE1lYIQ0W9pABLDD7ZGv4HxGryusyhUDD08mZA8cDmR-j6i1VIxHWHlPCTSF1Dth0oUQ__"
-                  alt=""
-                />
+                <a href="https://www.visitjeju.net/kr/bigdatamap/" target="_blank" rel="noreferrer">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/b0e8/46cd/a0b30377f65303f4052d53b9405db70a?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZKE89tFBPTXsQ6A1gSSZB~CrihDA7GBXh8TncSWP6~M3~WVel6GXjfXUq1YuH1CUp6IIb5kbWbfOF9jx7Gi7kEMdrt28ebkVwj6K-RvaY1KUcDcZZz6qBha9HC3RbJBGZrXpVQrKixvSualtKBaJquNWrERohBdqaQJ0M5ubFeMtqbq60SQx7-1D1qPMv5LPgjAa0VE1K3LyqBmRDuSH3wtoeNVOu2MAXSndAuugbDLvryVJfoh-CyPakyUwH2j6ajZUsQA52Qqyfd~clqgE1lYIQ0W9pABLDD7ZGv4HxGryusyhUDD08mZA8cDmR-j6i1VIxHWHlPCTSF1Dth0oUQ__"
+                    alt="혼잡도 서비스"
+                  />
+                </a>
               </div>
               <div className="text-center mt-3">
                 <p className="text-lg">제주 관광객·차량을 실시간으로 확인하는</p>
@@ -68,11 +70,13 @@ export default function TravelTip() {
             {/* 오른쪽 이미지 */}
             <div className="xl:w-[30%]">
               <div className="w-full bg-gray-700 flex flex-col items-center rounded-2xl overflow-hidden">
-                <img
-                  className="w-full"
-                  src="https://s3-alpha-sig.figma.com/img/7c7c/c52f/f84e277d544bb8000a691b831398a0b9?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y6uF1AfNQEPt85AyyrnshnQb6HRqvn0KGwugygCJoP8JMpEMlvaQUm86bvKcYsF7OxAGTvzDgU2jHnckmjRft9NdyRZQ37ceI184NppqQ-7Xv1HE3eLp8jlFUKT6qK7IuHp2n4oPDdNH0lER9iGCKojabT6rLcllRHeUFGtTQnFdHoseqYQLuY86EcYhDszkTAFkH4Ii8eEUbulL6WAPlwM-9fZz6YMqvzknvL4HMYjUN7jRFtXHqjOMDMs4N6dFXVu69OOL-RaJIOw-qBBfTLeooFjzd8ZcmR--0eUSrxsuwOiSl88NhPQC5xs1yyFuQWcOzeagjyX5GXyOpDodcw__"
-                  alt=""
-                />
+                <a className="w-full" href="https://www.safejeju.com/" target="_blank" rel="noreferrer">
+                  <img
+                    className="w-full"
+                    src="https://s3-alpha-sig.figma.com/img/7c7c/c52f/f84e277d544bb8000a691b831398a0b9?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y6uF1AfNQEPt85AyyrnshnQb6HRqvn0KGwugygCJoP8JMpEMlvaQUm86bvKcYsF7OxAGTvzDgU2jHnckmjRft9NdyRZQ37ceI184NppqQ-7Xv1HE3eLp8jlFUKT6qK7IuHp2n4oPDdNH0lER9iGCKojabT6rLcllRHeUFGtTQnFdHoseqYQLuY86EcYhDszkTAFkH4Ii8eEUbulL6WAPlwM-9fZz6YMqvzknvL4HMYjUN7jRFtXHqjOMDMs4N6dFXVu69OOL-RaJIOw-qBBfTLeooFjzd8ZcmR--0eUSrxsuwOiSl88NhPQC5xs1yyFuQWcOzeagjyX5GXyOpDodcw__"
+                    alt="안전여행 스탬프"
+                  />
+                </a>
               </div>
               <div className="text-center mt-3">
                 <p className="text-lg">안전한 제주 여행의 시작</p>
