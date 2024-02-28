@@ -30,7 +30,7 @@ export default function NowTaday() {
             {/* 1 */}
             <div className=" relative w-[80%] h-[300px]">
               {limitedData.map((item, index) => (
-                <>
+                <div key={index}>
                   <div
                     className={`w-[100%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg`}
                     style={{
@@ -40,12 +40,12 @@ export default function NowTaday() {
                       backgroundPosition: "center",
                     }}
                   >
-                    <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">{item.introduction}</div>
+                    <div className="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">{item.introduction}</div>
                   </div>
                   <div className="text-center">
                     <h2 className="text-3xl">{item.title}</h2>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function NowTaday() {
           <div className="w-1/2 h-full  flex flex-col items-center xl:pt-[100px]">
             {/* 1 */}
             <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
-              <div class="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">Lorem ipsum dolor,sit amet consectetur adipisicing elit.</div>
+              <div className="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">Lorem ipsum dolor,sit amet consectetur adipisicing elit.</div>
             </div>
             <h2>사진 제목</h2>
             {/* 2 */}
