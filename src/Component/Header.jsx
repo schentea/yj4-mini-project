@@ -14,7 +14,9 @@ export default function Header() {
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=40e2fb8d8c310ebdcb45aa9fc840f292&units=metric");
+        const response = await fetch(
+          "https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=40e2fb8d8c310ebdcb45aa9fc840f292&units=metric"
+        );
         if (!response.ok) {
           throw new Error("날씨 정보를 가져오는 데 문제가 발생했습니다.");
         }
@@ -72,18 +74,36 @@ export default function Header() {
     <div>
       <header className="w-full h-[100vh] relative">
         <div className="absolute inset-0 overflow-hidden">
-          <video muted autoPlay loop className="w-full h-full object-cover object-center">
+          <video
+            muted
+            autoPlay
+            loop
+            className="w-full h-full object-cover object-center"
+          >
             <source src={Video} type="video/mp4" />
           </video>
         </div>
-        <motion.div opacity initial={{ opacity: 0, y: -150 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }} className="absolute top-[50%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 text-white z-10">
+        <motion.div
+          opacity
+          initial={{ opacity: 0, y: -150 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+          className="absolute top-[50%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 text-white z-10"
+        >
           <h2 className="mb-5">자연이 숨쉬는 곳</h2>
-          <h1 className="">빛나는 제주</h1>
+          <h1 className="drop-shadow-2xl shadow-black">빛나는 제주</h1>
         </motion.div>
-        <img src={logo} alt="로고" className="absolute top-4 left-2 h-[70px] xl:h-[70px]" />
+        <img
+          src={logo}
+          alt="로고"
+          className="absolute top-4 left-2 h-[70px] xl:h-[70px]"
+        />
         <div className="absolute inset-x-0 top-4 grid px-6 xl:px-8 h-[80px] xl:h-[120px]">
           <nav className="text-[32px] text-white xl:hidden justify-self-end">
-            <RxHamburgerMenu onClick={handleNavOpen} className=" cursor-pointer" />
+            <RxHamburgerMenu
+              onClick={handleNavOpen}
+              className=" cursor-pointer"
+            />
           </nav>
           <nav className="hidden xl:block  justify-self-end">
             <div className="text-[26px] text-white xl:flex space-x-[4vw] hidden items-center">
@@ -98,8 +118,22 @@ export default function Header() {
               <p>SNS</p>
             </div>
           </nav>
-          <motion.nav className={`fixed ${window.innerWidth >= 1280 ? "hidden" : "flex"} top-0 z-20 bg-white/50 backdrop-blur-xl min-w-[300px] max-w-[500px] h-full xl:flex xl:space-x-32 text-lg xl:text-3xl right-0 transition-transform duration-300 ${isNavOpen ? "transform translate-x-0" : "transform translate-x-full"}`} initial={false} animate={isNavOpen ? "end" : "start"} transition={{ delayChildren: 0.1, staggerChildren: 0.1 }}>
-            <FiX onClick={handleNavClose} className="text-[32px] absolute top-6 right-6 cursor-pointer" />
+          <motion.nav
+            className={`fixed ${
+              window.innerWidth >= 1280 ? "hidden" : "flex"
+            } top-0 z-20 bg-white/50 backdrop-blur-xl min-w-[300px] max-w-[500px] h-full xl:flex xl:space-x-32 text-lg xl:text-3xl right-0 transition-transform duration-300 ${
+              isNavOpen
+                ? "transform translate-x-0"
+                : "transform translate-x-full"
+            }`}
+            initial={false}
+            animate={isNavOpen ? "end" : "start"}
+            transition={{ delayChildren: 0.1, staggerChildren: 0.1 }}
+          >
+            <FiX
+              onClick={handleNavClose}
+              className="text-[32px] absolute top-6 right-6 cursor-pointer"
+            />
             <div className="mt-24 ml-[50px] text-[32px] space-y-10 h-full">
               <motion.div variants={item} className="mb-16">
                 <p className="text-[20px] ml-[18px]">지금 제주도는</p>
