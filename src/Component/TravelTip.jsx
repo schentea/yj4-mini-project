@@ -1,6 +1,7 @@
 import minilogo1 from "../image/minilogo1.jpg";
 import minilogo2 from "../image/minilogo2.jpg";
 import minilogo3 from "../image/minilogo3.jpg";
+import stay from "../image/stay.png";
 import { Carousel } from "react-bootstrap";
 import { HiOutlineLightBulb } from "react-icons/hi";
 
@@ -8,7 +9,7 @@ export default function TravelTip() {
   return (
     <>
       <section className="w-full min-h-screen flex justify-center">
-        <div className="w-full h-full p-[0px] sm:p-12 max-w-[1300px]">
+        <div className="w-full h-full xl:p-[0px] sm:p-12 max-w-[1300px] p-2">
           {/* TITLE */}
           <div className="w-full flex flex-col items-center mt-16 mb-20">
             {/* <h2 className="flex items-center">
@@ -22,7 +23,7 @@ export default function TravelTip() {
             <p className="mt-2 text-lg">알고가면 더 재미있는 제주도 여행 정보</p>
           </div>
           {/* 이미지 통괄  */}
-          <div className="flex justify-between xl:mb-28 mb-[500px] relative lg:mb-[650px]">
+          <div className="flex justify-between xl:mb-32 mb-[73vw] relative ">
             {/* 왼쪽 이미지 */}
             <div className="xl:w-[30%] mr-4">
               <div className="w-full bg-gray-700 flex flex-col items-center rounded-2xl">
@@ -41,7 +42,7 @@ export default function TravelTip() {
               <p className="text-2xl text-center mb-3 font-semibold">NEWS</p>
               <Carousel id="Carousel">
                 <Carousel.Item>
-                  <a href="https://visitjeju.net/kr/bbs/view?bbsid=NEWS&postid=13757&menuId=DOM_000001727001000000" target="_blank">
+                  <a href="https://visitjeju.net/kr/bbs/view?bbsid=NEWS&postid=13757&menuId=DOM_000001727001000000" target="_blank" rel="noreferrer">
                     <img
                       className="d-block w-100"
                       src="https://s3-alpha-sig.figma.com/img/1d0b/33e2/0ac7d18c60878918108e1d8ae5ab7c46?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inhBdxTSY37wZqayEkx2Euq-BiVQaNogCdngpZvMQJgmPGMDLMsNl8ShPK~vZKaKbhVKltCV7wdx1t1b9mK8Z4LcJCVFssXn~j8h5EUFErgWPMtseAUQsAg0PEx1dvog2ypH5il9STMbKZ9lht-alxNg8U6Lkl907e3VDwjdy3TbP1S2HsIjEq2nEqZ1n1LP8tDw~8I3OrENwQF8LpHbukPIE3tfJwB0OU7rBH0zocCUNhpEcMRYQGrBOGr6H38518yQxkhxUwtqWpxKwtxqMFDQs3PylDBVlAgmRv-ytFTxDSbV8DXTrn6mIi-K0EYPYZucIjst29R12aoQhKgJVA__"
@@ -51,17 +52,15 @@ export default function TravelTip() {
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <a href="https://www.instagram.com/apecjeju2025/" target="_blank">
+                  <a href="https://www.instagram.com/apecjeju2025/" target="_blank" rel="noreferrer">
                     <img className="d-block w-100 max-h-[408px]" src="https://visitjeju.net/image/main/right_ban_apec2.jpg" alt="Second slide" />
                   </a>
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src="https://s3-alpha-sig.figma.com/img/1d0b/33e2/0ac7d18c60878918108e1d8ae5ab7c46?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inhBdxTSY37wZqayEkx2Euq-BiVQaNogCdngpZvMQJgmPGMDLMsNl8ShPK~vZKaKbhVKltCV7wdx1t1b9mK8Z4LcJCVFssXn~j8h5EUFErgWPMtseAUQsAg0PEx1dvog2ypH5il9STMbKZ9lht-alxNg8U6Lkl907e3VDwjdy3TbP1S2HsIjEq2nEqZ1n1LP8tDw~8I3OrENwQF8LpHbukPIE3tfJwB0OU7rBH0zocCUNhpEcMRYQGrBOGr6H38518yQxkhxUwtqWpxKwtxqMFDQs3PylDBVlAgmRv-ytFTxDSbV8DXTrn6mIi-K0EYPYZucIjst29R12aoQhKgJVA__"
-                    alt="Third slide"
-                  />
+                  <a href="https://www.kareumstay.com/" target="_blank" rel="noreferrer">
+                    <img className="d-block w-100 max-h-[408px]" src={stay} alt="Third slide" />
+                  </a>
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
@@ -82,7 +81,7 @@ export default function TravelTip() {
             </div>
           </div>
           {/* 아래쪽 컨텐츠 */}
-          <div className="w-full h-[110px] border-1 border-[#BCB1A7] rounded-3xl flex justify-around items-center px-[4px] sm:px-16">
+          <div className="w-full h-[100px] border-1 border-[#BCB1A7] rounded-3xl flex justify-around items-center px-[4px] sm:px-16 mb-12">
             <div className="xl:text-[24px] flex items-center">
               <img src={minilogo1} alt="" className="w-8 mr-2" />
               <span>면세 쇼핑몰</span>
