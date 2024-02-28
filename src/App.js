@@ -6,6 +6,7 @@ import JejuInstagram from "./Component/JejuInstagram";
 
 import LayOut from "./Component/LayOut";
 import KaKaoMap from "./Component/KaKaoMap";
+import ChatBot from "./Component/ChatBot";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         {/* 지도API */}
         <KaKaoMap />
         {/* 푸터 */}
+        <ChatBot />
       </LayOut>
       {/* 업데이트하자 */}
     </>
