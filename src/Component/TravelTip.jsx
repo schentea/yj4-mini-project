@@ -44,7 +44,7 @@ export default function TravelTip() {
                 <Carousel.Item>
                   <a href="https://visitjeju.net/kr/bbs/view?bbsid=NEWS&postid=13757&menuId=DOM_000001727001000000" target="_blank" rel="noreferrer">
                     <img
-                      className="d-block w-100"
+                      className="d-block w-100 max-h-[408px]"
                       src="https://s3-alpha-sig.figma.com/img/1d0b/33e2/0ac7d18c60878918108e1d8ae5ab7c46?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inhBdxTSY37wZqayEkx2Euq-BiVQaNogCdngpZvMQJgmPGMDLMsNl8ShPK~vZKaKbhVKltCV7wdx1t1b9mK8Z4LcJCVFssXn~j8h5EUFErgWPMtseAUQsAg0PEx1dvog2ypH5il9STMbKZ9lht-alxNg8U6Lkl907e3VDwjdy3TbP1S2HsIjEq2nEqZ1n1LP8tDw~8I3OrENwQF8LpHbukPIE3tfJwB0OU7rBH0zocCUNhpEcMRYQGrBOGr6H38518yQxkhxUwtqWpxKwtxqMFDQs3PylDBVlAgmRv-ytFTxDSbV8DXTrn6mIi-K0EYPYZucIjst29R12aoQhKgJVA__"
                       alt="First slide"
                     />
@@ -53,13 +53,13 @@ export default function TravelTip() {
                 </Carousel.Item>
                 <Carousel.Item>
                   <a href="https://www.instagram.com/apecjeju2025/" target="_blank" rel="noreferrer">
-                    <img className="d-block w-100 max-h-[408px]" src="https://visitjeju.net/image/main/right_ban_apec2.jpg" alt="Second slide" />
+                    <img className="d-block w-100 max-h-[408px] object-cover object-bottom" src="https://visitjeju.net/image/main/right_ban_apec2.jpg" alt="Second slide" />
                   </a>
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <a href="https://www.kareumstay.com/" target="_blank" rel="noreferrer">
-                    <img className="d-block w-100 max-h-[408px]" src={stay} alt="Third slide" />
+                    <img className="d-block w-100 max-h-[408px] object-cover" src={stay} alt="Third slide" />
                   </a>
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
