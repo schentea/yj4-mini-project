@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="mb-2">
             <h2 className="text-3xl font-bold uppercase">site map</h2>
           </div>
-          <div className="flex flex-wrap xl:gap-x-6 gap-x-16 gap-y-1 font-semibold mr-8 text-xl">
+          <div id="footMap" className="flex flex-wrap xl:gap-x-6 gap-x-16 gap-y-1 font-semibold mr-8 text-xl">
             <a href="#travle">
               <p>여행 TIP</p>
             </a>
@@ -18,7 +18,7 @@ export default function Footer() {
               <p>관광지</p>
             </a>
             <a href="#sns">
-              <p>SNS</p>
+              <p>인스타그램</p>
             </a>
             <a href="#kakaoMap">
               <p>지도</p>
