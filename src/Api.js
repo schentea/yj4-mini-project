@@ -38,7 +38,7 @@ accessToken = longTermToken;
 export async function insta() {
   try {
     return await fetch(
-      `https://graph.instagram.com/25034924716155779/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=${longTermToken}`
+      `https://graph.instagram.com/25034924716155779/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=${accessToken}`
     ).then((res) => res.json());
   } catch (error) {
     console.log(error);
