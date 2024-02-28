@@ -71,7 +71,9 @@ export default function KaKaoMap() {
               // 검색 성공 시 로직
               displayPlaces(data);
               displayPagination(pagination);
-            } else if (status === window.kakao.maps.services.Status.ZERO_RESULT) {
+            } else if (
+              status === window.kakao.maps.services.Status.ZERO_RESULT
+            ) {
               alert("검색 결과가 존재하지 않습니다.");
             } else if (status === window.kakao.maps.services.Status.ERROR) {
               alert("검색 결과 중 오류가 발생했습니다.");
@@ -86,8 +88,7 @@ export default function KaKaoMap() {
           var listEl = document.getElementById("placesList"),
             menuEl = document.getElementById("menu_wrap"),
             fragment = document.createDocumentFragment(),
-            bounds = new window.kakao.maps.LatLngBounds(),
-            listStr = "";
+            bounds = new window.kakao.maps.LatLngBounds(); // 수정된 부분: 여기에 선언된 listStr 변수는 더 이상 사용되지 않습니다.
 
           // 검색 결과 목록에 추가된 항목들을 제거합니다
           removeAllChildNods(listEl);
@@ -95,9 +96,12 @@ export default function KaKaoMap() {
           // 지도에 표시되고 있는 마커를 제거합니다
           removeMarker();
 
-          for (var i = 0; i < places.length; i++) {
+          for (let i = 0; i < places.length; i++) {
             // 마커를 생성하고 지도에 표시합니다
-            var placePosition = new window.kakao.maps.LatLng(places[i].y, places[i].x),
+            let placePosition = new window.kakao.maps.LatLng(
+                places[i].y,
+                places[i].x
+              ),
               marker = addMarker(placePosition, i),
               itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
 
@@ -109,13 +113,21 @@ export default function KaKaoMap() {
             // 해당 장소에 인포윈도우에 장소명을 표시합니다
             // mouseout 했을 때는 인포윈도우를 닫습니다
             (function (marker, title) {
-              window.kakao.maps.event.addListener(marker, "mouseover", function () {
-                displayInfowindow(marker, title);
-              });
+              window.kakao.maps.event.addListener(
+                marker,
+                "mouseover",
+                function () {
+                  displayInfowindow(marker, title);
+                }
+              );
 
-              window.kakao.maps.event.addListener(marker, "mouseout", function () {
-                infowindow.close();
-              });
+              window.kakao.maps.event.addListener(
+                marker,
+                "mouseout",
+                function () {
+                  infowindow.close();
+                }
+              );
 
               itemEl.onmouseover = function () {
                 displayInfowindow(marker, title);
@@ -140,7 +152,11 @@ export default function KaKaoMap() {
         // 검색결과 항목을 Element로 반환하는 함수입니다
         function getListItem(index, places) {
           var el = document.createElement("li"),
-            itemStr = `<span class="markerbg marker_${index + 1}"></span><div class="info">   <h5 class="add">${places.place_name}</h5>`;
+            itemStr = `<span class="markerbg marker_${
+              index + 1
+            }"></span><div class="info">   <h5 class="add">${
+              places.place_name
+            }</h5>`;
 
           if (places.road_address_name) {
             itemStr += `<span>${places.road_address_name}</span>`;
@@ -159,14 +175,19 @@ export default function KaKaoMap() {
 
         // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
         function addMarker(position, idx, title) {
-          var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png", // 마커 이미지 url, 스프라이트 이미지를 씁니다
+          var imageSrc =
+              "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png", // 마커 이미지 url, 스프라이트 이미지를 씁니다
             imageSize = new window.kakao.maps.Size(36, 37), // 마커 이미지의 크기
             imgOptions = {
               spriteSize: new window.kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기
               spriteOrigin: new window.kakao.maps.Point(0, idx * 46 + 10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
               offset: new window.kakao.maps.Point(13, 37), // 마커 좌표에 일치시킬 이미지 내에서의 좌표
             },
-            markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
+            markerImage = new window.kakao.maps.MarkerImage(
+              imageSrc,
+              imageSize,
+              imgOptions
+            ),
             marker = new window.kakao.maps.Marker({
               position: position, // 마커의 위치
               image: markerImage,
@@ -220,7 +241,8 @@ export default function KaKaoMap() {
         // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
         // 인포윈도우에 장소명을 표시합니다
         function displayInfowindow(marker, title) {
-          var content = '<div style="padding:5px;z-index:1;">' + title + "</div>";
+          var content =
+            '<div style="padding:5px;z-index:1;">' + title + "</div>";
 
           infowindow.setContent(content);
           infowindow.open(map, marker);
@@ -237,7 +259,13 @@ export default function KaKaoMap() {
   }, [search]);
 
   // 지도 버튼 목록
-  const mapArr = ["한라산 공원", "제주민속촌", "동문시장", "제주 주상절리대", "귤귤귤"];
+  const mapArr = [
+    "한라산 공원",
+    "제주민속촌",
+    "동문시장",
+    "제주 주상절리대",
+    "귤귤귤",
+  ];
 
   return (
     <section id="kakaoMap" className="mt-16 xl:mt-32">
@@ -253,7 +281,9 @@ export default function KaKaoMap() {
             onClick={() => {
               setSearch(item);
               setTimeout(() => {
-                formRef.current.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+                formRef.current.dispatchEvent(
+                  new Event("submit", { cancelable: true, bubbles: true })
+                );
               }, 150);
             }}
           >
@@ -267,8 +297,21 @@ export default function KaKaoMap() {
           <div className="option">
             <div>
               <form onSubmit={handleSubmit} ref={formRef}>
-                <div id="searchWrap" className={computeClassName()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                  <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} id="keyword" size="15" />
+                <div
+                  id="searchWrap"
+                  className={computeClassName()}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <input
+                    type="text"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                    id="keyword"
+                    size="15"
+                  />
                   <button type="submit">
                     <IoSearch size="25px" color="#ef6d00" />
                   </button>
@@ -281,7 +324,8 @@ export default function KaKaoMap() {
             {empty && (
               <p id="list404Txt">
                 <PiMapPinLine size="100px" color="#777" />
-                키워드를 입력하거나 버튼을 눌러서 제주도의 관광지를 확인해보세요.
+                키워드를 입력하거나 버튼을 눌러서 제주도의 관광지를
+                확인해보세요.
               </p>
             )}
           </ul>
