@@ -3,6 +3,7 @@ import "./KaKaoMap.css";
 import { IoSearch } from "react-icons/io5";
 import { PiMapPinLine } from "react-icons/pi";
 import { MdGpsFixed } from "react-icons/md";
+import Chat from "../image/chat.jpg";
 
 export default function KaKaoMap() {
   const apiKey = "271da05001582197a052d62dc0a58327";
@@ -86,7 +87,8 @@ export default function KaKaoMap() {
           var listEl = document.getElementById("placesList"),
             menuEl = document.getElementById("menu_wrap"),
             fragment = document.createDocumentFragment(),
-            bounds = new window.kakao.maps.LatLngBounds();
+            bounds = new window.kakao.maps.LatLngBounds(),
+            listStr = "";
 
           // 검색 결과 목록에 추가된 항목들을 제거합니다
           removeAllChildNods(listEl);
@@ -245,7 +247,6 @@ export default function KaKaoMap() {
         <span className=" font-bold text-[#ef6d00]">먼저 살펴보기&nbsp;</span>
         <MdGpsFixed className="inline-block" size="40px" />
       </h2>
-
       <div id="mapBtnWrap">
         {mapArr.map((item, index) => (
           <button
@@ -287,6 +288,11 @@ export default function KaKaoMap() {
           </ul>
           <div id="pagination"></div>
         </div>
+      </div>{" "}
+      <div className="w-full h-[150px] relative">
+        <a href="#">
+          <img id="hidden_img" src={Chat} alt="" className=" absolute -top-40 right-20  w-40 hidden" />
+        </a>
       </div>
     </section>
   );

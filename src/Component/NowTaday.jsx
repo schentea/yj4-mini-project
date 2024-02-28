@@ -3,19 +3,19 @@ import { jeju } from "../Api";
 
 export default function NowTaday() {
   const { data, isLoading } = useQuery("관광지사진", jeju);
-  const limitedData = data ? data.items.slice(0, 8) : [];
+  const limitedData = data ? data.items.slice(60, 64) : [];
+  const limitedData2 = data ? data.items.slice(78, 82) : [];
 
-  console.log(limitedData);
   return (
     <>
-      <section className="w-full xl:h-[200vh] xl:flex-row pb-16 bg-[url('./image/bg.jpg')] bg-cover bg-center bg-fixed flex flex-col items-center ">
+      <section className="w-full  h-[170vh] xl:h-[270vh]  xl:flex-row pb-16 bg-[url('./image/bg.jpg')] bg-cover bg-center bg-fixed flex flex-col xl:items-start items-center ">
         {/* 왼쪽 공간 */}
-        <div className="w-1/3 h-2/3 flex flex-col justify-center items-center mx-auto xl:ml-20">
+        <div className="w-1/3  xl:h-screen flex flex-col justify-center items-center  mx-auto xl:ml-20  xl:sticky xl:top-0  ">
           {/* 주황색 제목 */}
-          <div className="sm:w-[500px] w-[375px] text-center md:text-left xl:ml-32 overflow-hidden ">
+          <div className="w-[500px] text-center md:text-left xl:ml-32 overflow-hidden  ">
             <div className="mb-4 mt-16 ">
-              <h2 className="font-bold xl:text-7xl sm:text-6xl text-4xl text-[#EF6D00] ">지금 제주도!</h2>
-              <h2 className="font-bold xl:text-7xl sm:text-6xl text-4xl text-[#EF6D00]">여기 어때요?</h2>
+              <h2 className="font-bold xl:text-7xl text-6xl  text-[#EF6D00] ">지금 제주도!</h2>
+              <h2 className="font-bold xl:text-7xl text-6xl text-[#EF6D00]">여기 어때요?</h2>
             </div>
             {/* 아래 텍스트 */}
             <div className="text-[20px] text-white ">
@@ -24,15 +24,15 @@ export default function NowTaday() {
           </div>
         </div>
         {/* 오른쪽 공간 */}
-        <div className="w-2/3 h-full flex xl:ml-16 ">
+        <div className="w-2/3 h-full flex xl:ml-16 space-x-4">
           {/*오른쪽중에 _ 왼쪽*/}
           <div className="w-1/2 h-full flex flex-col items-center xl:pt-10 overflow-hidden">
             {/* 1 */}
-            <div className=" relative w-[80%] h-[300px]">
+            <div className=" relative w-full xl:w-[80%] h-[300px]  ">
               {limitedData.map((item, index) => (
-                <div key={index}>
+                <>
                   <div
-                    className={`w-[100%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg`}
+                    className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 xl:mt-32 shadow-lg  `}
                     style={{
                       backgroundImage: `url('${item?.repPhoto?.photoid?.thumbnailpath}')`,
                       backgroundRepeat: "no-repeat",
@@ -40,32 +40,38 @@ export default function NowTaday() {
                       backgroundPosition: "center",
                     }}
                   >
-                    <div className="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">{item.introduction}</div>
+                    <div className="h-[50%] text-[12px] sm:text-[15px] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500 ">{item.introduction}</div>
                   </div>
-                  <div className="text-center">
-                    <h2 className="text-3xl">{item.title}</h2>
+                  <div className="text-center w-full xl:w-[80%]">
+                    <h2 className="xl:text-3xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
                   </div>
-                </div>
+                </>
               ))}
             </div>
           </div>
-          {/*오른쪽중에 _ 오른쪽*/}
-          <div className="w-1/2 h-full  flex flex-col items-center xl:pt-[100px]">
+          {/*오른쪽중에_오른쪽*/}
+          <div className="w-1/2 h-full flex flex-col items-center xl:pt-[100px] overflow-hidden  ">
             {/* 1 */}
-            <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
-              <div className="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">Lorem ipsum dolor,sit amet consectetur adipisicing elit.</div>
+            <div className=" relative w-full xl:w-[80%] h-[300px] ">
+              {limitedData2.map((item, index) => (
+                <>
+                  <div
+                    className={`w-full xl:w-[80%] relative h-[230px] xl:h-[350px] overflow-hidden hover:text-white group p-5 pt-20 mt-12 xl:mt-40 shadow-lg `}
+                    style={{
+                      backgroundImage: `url('${item?.repPhoto?.photoid?.thumbnailpath}')`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  >
+                    <div className="h-[50%] text-[12px] sm:text-[15px] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">{item.introduction}</div>
+                  </div>
+                  <div className=" w-full xl:w-[80%]  text-center">
+                    <h2 className="xl:text-3xl text-xl truncate overflow-hidden whitespace-nowrap text-white ">{item.title}</h2>
+                  </div>
+                </>
+              ))}
             </div>
-            <h2>사진 제목</h2>
-            {/* 2 */}
-            <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
-              <div className="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">Lorem ipsum dolor,sit amet consectetur adipisicing elit.</div>
-            </div>
-            <h2>사진 제목</h2>
-            {/* 3 */}
-            <div className="w-[80%] relative h-[280px] xl:h-[570px] overflow-hidden hover:text-white group p-5 pt-20 mt-10 shadow-lg bg-[url('https://pixabay.com/get/g57a76fc9e9884cd03af6c1ffed7f2059fd0ab5ba79b96b63be6c0d245ef34a7854584166974355bdc7934180c0b8c098.jpg')] bg-cover bg-center">
-              <div className="h-[50%] p-4 bg-black bg-opacity-50 absolute bottom-0 left-0 right-0 overflow-hidden translate-y-full group-hover:translate-y-0 duration-500">Lorem ipsum dolor,sit amet consectetur adipisicing elit.</div>
-            </div>
-            <h2>사진 제목</h2>
           </div>
         </div>
       </section>
