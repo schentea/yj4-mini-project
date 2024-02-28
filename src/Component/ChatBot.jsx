@@ -3,7 +3,7 @@ import Chat from "../image/chat.png";
 
 export default function ChatBot() {
   const openPopup = (url) => {
-    const popupWindow = window.open(url, "_blank", "width=350,height=600,left=200,top=200");
+    const popupWindow = window.open(url, "_blank", "width=370,height=600,left=200,top=200");
     if (popupWindow) popupWindow.focus();
   };
 

@@ -8,7 +8,7 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 export default function TravelTip() {
   return (
     <>
-      <section className="w-full min-h-screen flex justify-center">
+      <section id="travle" className="w-full min-h-screen flex justify-center">
         <div className="w-full h-full xl:p-[0px] sm:p-12 max-w-[1300px] p-2">
           {/* TITLE */}
           <div className="w-full flex flex-col items-center mt-16 mb-20">

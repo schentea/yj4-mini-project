@@ -93,9 +93,18 @@ export default function Header() {
                   <p>{temp}℃</p>
                 </div>
               </div>
-              <p>관광지</p>
-              <p>여행 TIP</p>
-              <p>SNS</p>
+              <a href="#travle">
+                <p>여행 TIP</p>
+              </a>
+              <a href="#now">
+                <p>관광지</p>
+              </a>
+              <a href="#sns">
+                <p>SNS</p>
+              </a>
+              <a href="#kakaoMap">
+                <p>지도</p>
+              </a>
             </div>
           </nav>
           <motion.nav className={`fixed ${window.innerWidth >= 1280 ? "hidden" : "flex"} top-0 z-20 bg-white/50 backdrop-blur-xl min-w-[300px] max-w-[500px] h-full xl:flex xl:space-x-32 text-lg xl:text-3xl right-0 transition-transform duration-300 ${isNavOpen ? "transform translate-x-0" : "transform translate-x-full"}`} initial={false} animate={isNavOpen ? "end" : "start"} transition={{ delayChildren: 0.1, staggerChildren: 0.1 }}>
@@ -108,9 +117,18 @@ export default function Header() {
                   <p>{temp}℃</p>
                 </div>
               </motion.div>
-              <motion.p variants={item}>관광지</motion.p>
-              <motion.p variants={item}>여행 TIP</motion.p>
-              <motion.p variants={item}>SNS</motion.p>
+              <motion.p variants={item}>
+                <a href="#travle">여행 TIP</a>
+              </motion.p>
+              <motion.p variants={item}>
+                <a href="#now">관광지</a>
+              </motion.p>
+              <motion.p variants={item}>
+                <a href="#sns">SNS</a>
+              </motion.p>
+              <motion.p variants={item}>
+                <a href="#kakaoMap">지도</a>
+              </motion.p>
             </div>
           </motion.nav>
         </div>
