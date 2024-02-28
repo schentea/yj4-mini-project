@@ -34,7 +34,7 @@ export default function JejuInstagram() {
                   <div key={index} className="flex justify-center items-center">
                     <img
                       src={imageUrl}
-                      alt={`image-${index}`}
+                      alt={`img-${index}`}
                       className="w-full h-auto object-cover object-center"
                       style={{ minWidth: 0 }}
                     />
