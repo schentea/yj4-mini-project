@@ -9,36 +9,15 @@ export async function jeju() {
   }
 }
 
-// 인스타 api 장기 토큰 자동 갱신
-let accessToken = "";
-
-async function refreshAccessToken() {
-  try {
-    const response = await fetch(
-      `https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${accessToken}`,
-      { method: "POST" }
-    );
-    const data = await response.json();
-    accessToken = data.access_token;
-    console.log("새로운 액세스 토큰:", accessToken);
-  } catch (error) {
-    console.error("액세스 토큰 갱신 중 오류 발생:", error);
-  }
-}
-
-// 토큰을 주기적으로 갱신하기
-setInterval(refreshAccessToken, 60 * 60 * 1000); // 1시간마다 갱신
-
 // 장기 토큰
 const longTermToken =
-  "IGQWRNS2JIY1NUN0p2ME1BM0dhTUNSZAVM3NERHUjMwVi1XRVdNeEpYb1NsTXN4WFNlY1BHV242MjhTd09LLTBHY203eG5pSGtrOWdvWnFnN1ZA4M2gwT2ZAzY2p0RTBlcWUyVVlwenZAaazlOOEpQc1dZAeUtodTRUSV85MklPYVJrem5jdwZDZD";
-accessToken = longTermToken;
+  "IGQWRQSnBpODNra24yelZApa2kzaUdVdU1PcXdXckE5aThyeGdxbDNCWHRYTng0VVJGU1lhc1FzWDROZADF6TnQ1LTJub1lGRkJOSEhwdTBySkdYajY1bjduQnNRSER2ckZAuS2xBVG1HbXViZAwZDZD";
 
 // 인스타 api 요청
 export async function insta() {
   try {
     return await fetch(
-      `https://graph.instagram.com/25034924716155779/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=${accessToken}`
+      `https://graph.instagram.com/25034924716155779/media?fields=id,media_type,media_url,permalink,thumbnail_url,username,caption&access_token=${longTermToken}`
     ).then((res) => res.json());
   } catch (error) {
     console.log(error);
