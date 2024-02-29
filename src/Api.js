@@ -11,7 +11,7 @@ export async function jeju() {
 
 // 장기 토큰
 const longTermToken =
-  "IGQWRQSnBpODNra24yelZApa2kzaUdVdU1PcXdXckE5aThyeGdxbDNCWHRYTng0VVJGU1lhc1FzWDROZADF6TnQ1LTJub1lGRkJOSEhwdTBySkdYajY1bjduQnNRSER2ckZAuS2xBVG1HbXViZAwZDZD";
+  "IGQWROeDI4WEJpbHZAFcFVJaXQxZAUdtX01PbU4xSS1KVDZAUazFoTVdHUEdGampjMy04UWMxQzdvM1llUU9Wc292OHBIVEQ0TUVjUG9GR2FjNU1sTHlpNWo5dUZAOaDB1bmJlU0xIdDJENzFHYlh0dWdMY3JvbnNQNWpIZAFNvajZAfQXBNZAwZDZD";
 
 // 인스타 api 요청
 export async function insta() {
